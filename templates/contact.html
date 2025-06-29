@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SIGCE</title>
+	<link href="static/css/bootstrap.min.css" rel="stylesheet" >
+	<link href="static/css/font-awesome.min.css" rel="stylesheet" >
+	<link href="static/css/global.css" rel="stylesheet">
+	<link href="static/css/contact.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<script src="js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+<section id="top" class="pt-3 pb-3">
+ <div class="container-xl">
+  <div class="row top_1">
+   <div class="col-md-4">
+    <div class="top_1l">
+		<h4 class="mb-0"><a class="col_brown"href="{{ url_for('home') }}"><span class="span_1 text-uppercase"><img src="img/11.jpg" height="50px",width="40px">   SIGCE</span> <br> <span class="font_12 span_2 text-muted fw-normal"></a></h4>
+	</div>
+   </div>
+   <div class="col-md-8">
+    <div class="top_1r">
+	   <div class="top_1ri row">
+	    <div class="col-md-4">
+		 <div class="top_1ri1">
+		  <span class="d-inline-block text-center border_1 span_1 rounded-circle float-start me-2"><i class="fa fa-phone"></i></span>
+		  <h6 class="font_14 mb-0"><span class="span_2 fw-bold d-inline-block mb-1">Call Now</span> <br> +91-8080949300</h6>
+		 </div>
+		</div>
+		<div class="col-md-4">
+		 <div class="top_1ri1">
+		  <span class="d-inline-block text-center border_1 span_1 rounded-circle float-start me-2"><i class="fa fa-envelope"></i></span>
+		  <h6 class="font_14 mb-0"><span class="span_2 fw-bold d-inline-block mb-1">Send Message</span> <br> contactus@sigce.edu.in</h6>
+		 </div>
+		</div>
+		<div class="col-md-4">
+		 <div class="top_1ri1">
+		  <span class="d-inline-block text-center border_1 span_1 rounded-circle float-start me-2"><i class="fa fa-map-marker"></i></span>
+		  <h6 class="font_14 mb-0"><span class="span_2 fw-bold d-inline-block mb-1">Our Location</span> <br>Plot No. 1, Sector 8, Ghansoli, Navi Mumbai -400701</h6>
+		 </div>
+		</div>
+	   </div>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="header">
+<nav class="navbar navbar-expand-md navbar-light bg_light p-0" id="navbar_sticky">
+  <div class="container-xl">
+   <a class="col_brown navbar-brand p-0  fw-bold me-5"href="{{ url_for('home') }}"><span class="span_1 text-uppercase"><img src="img/11.jpg" height="50px",width="40px"> </i>SIGCE</span> <br> <span class="font_12 span_2 text-muted fw-normal"></span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	   <ul class="navbar-nav mb-0">
+	    
+        <li class="nav-item">
+			<a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Home</a>
+		  </li>
+		 
+		  <li class="nav-item">
+			<a class="nav-link" href="{{ url_for('about') }}">About</a>
+        </li>
+
+		<li class="nav-item">
+			<a class="nav-link" href="{{ url_for('team') }}">Team </a>
+        </li>
+		
+		
+		<li class="nav-item">
+			<a class="nav-link" href="{{ url_for('contact') }}">Contact </a>
+        </li>
+
+      </ul>
+       <ul class="navbar-nav mb-0 ms-auto">
+		
+<!-- <li class="nav-item">
+          <a class="button_1" href="#">Get a Quote </a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+</section>
+
+<section id="center" class="center_contact">
+ <div class="center_om">
+   <div class="container-xl">
+  <div class="row center_o1 text-center">
+     <div class="col-md-12">
+	   <h1 class="text-white">Contact Us</h1>
+	   <h5 class="col_brown mb-0 fs-6"><a class="text-white"href="{{ url_for('home') }}">Home</a> <span class="mx-2 text-muted">/</span> Contact Us</h5>
+	 </div>
+  </div>
+ </div>
+ </div>
+</section>
+
+<section id="contact" class="p_3">
+ <div class="container-xl">
+	<div class="contact_1 row">
+	 <div class="col-md-8">
+	  <div class="contact_1l">
+	   <h4 class="mb-3">Need Assistance? Please Complete The Contact Form</h4>
+		 <div class="blog_dt1r5i row">
+		 <div class="col-md-6">
+		  <div class="blog_dt1r5il">
+		    <input class="form-control bg_light border-0" placeholder="Website" type="text">
+		  </div>
+		 </div> 
+		 <div class="col-md-6">
+		  <div class="blog_dt1r5il">
+		    <input class="form-control bg_light border-0" placeholder="Your Name" type="text">
+		  </div>
+		 </div>
+		</div>
+		<div class="blog_dt1r5i row mt-3">
+		 <div class="col-md-6">
+		  <div class="blog_dt1r5il">
+		    <input class="form-control bg_light border-0" placeholder="Email" type="text">
+		  </div>
+		 </div> 
+		 <div class="col-md-6">
+		  <div class="blog_dt1r5il">
+		    <input class="form-control bg_light border-0" placeholder="Phone Number" type="text">
+		  </div>
+		 </div>
+		</div>
+		<div class="blog_dt1r5i row mt-3">
+		 <div class="col-md-12">
+		  <div class="blog_dt1r5il">
+		    <textarea placeholder="Message" class="form-control form_text bg_light border-0"></textarea>
+			<h6 class="mb-0 mt-3"><a class="button" href="#">Send Messsage</a></h6>
+		  </div>
+		 </div> 
+		</div>
+
+	  </div>
+	 </div>
+	 <div class="col-md-4">
+	  <div class="contact_1r">
+	    <div class="contact_1r1 bg_brown rounded-3 p-4">
+		 <span class="text-white float-start lh-1 me-3 fs-1"><i class="fa fa-map-signs"></i></span>
+		 <p class="font_14 text-light mb-0">13206 Nulla Dapibus Rc Egetport, MT, 13607</p>
+		
+		</div>
+		<div class="contact_1r1 bg_light rounded-3 p-4 mt-4">
+		 <span class="float-start lh-1 me-3 fs-1"><i class="fa fa-envelope"></i></span>
+		 <p class="font_14 mb-0">info@gmail.com <br> Mon-Fri 8:45am-6:00pm</p>
+		
+		</div>
+		<div class="contact_1r1 bg_dark rounded-3 p-4 mt-4">
+		 <span class="float-start text-white lh-1 me-3 fs-1"><i class="fa fa-headphones"></i></span>
+		 <p class="font_14 text-light mb-0">+(123) 456-7890 <br> 24 X 7 online support</p>
+		
+		</div>
+	  </div>
+	 </div>
+	</div>
+	<div class="contact_2 row mt-4">
+      <div class="col-md-12">
+	    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114964.53925916665!2d-80.29949920266738!3d25.782390733064336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C+FL%2C+USA!5e0!3m2!1sen!2sin!4v1530774403788" height="450" style="border:0; width:100%;" allowfullscreen=""></iframe>
+	  </div>
+  </div>
+ </div>
+</section>
+
+
+<div class="main clearfix position-relative">
+ <div class="main_1 clearfix position-absolute w-100">
+   <section id="subs">
+ <div class="container-xl">
+  <div class="row subs_1 bg_brown pt-4 pb-4 rounded-3 mx-0 px-2">
+   <div class="col-md-6">
+    <div class="subs_1l">
+	 <!-- <h3 class="text-white">Subscribe</h3>
+	 <p class="mb-0 text-light">Now go push your own limits and succeed!</p> -->
+	</div>
+   </div>
+   <div class="col-md-6">
+    <div class="subs_1r">
+	  <div class="input-group p-2 rounded-5 bg-white rounded-3">
+				<input type="text" class="form-control border-0 bg-transparent" placeholder="Enter your email">
+				<span class="input-group-btn">
+					<button class="btn btn-primary bg-transparent border-0 fs-6 col_brown" type="button">
+						<i class="fa fa-long-arrow-right"></i> </button>
+				</span>
+		</div>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+ </div>
+ <div class="main_2 clearfix">
+   <section id="footer">
+ <div class="footer_m p_3">
+   <div class="container-xl">
+    <div class="footer_1 row">
+	 <div class="col-md-4">
+	  <div class="footer_1i">
+	    <div class="top_1l">
+	<h4 class="mb-0"><a class="text-white"href="{{ url_for('home') }}"><span class="span_1 text-uppercase"><i class="fa fa-graduation-cap text-white fs-2 align-middle col_brown"></i>SIGCE</span> <br> <span class="font_12 span_2 text-light fw-normal">Engineering College</span></a></h4>
+	  <p class="text-light mt-4">The best way is to develop and follow a plan. Start with your goals in mind and then work backward to develop the plan.</p>
+	  <h5 class="text-white">Follow Us</h5>
+	  <ul class="social-network social-circle mb-0 mt-4">
+					<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-skype"></i></a></li>
+					<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-pinterest"></i></a></li>
+					<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+				</ul>
+	</div>
+	  </div>
+	 </div>
+	 <div class="col-md-2">
+	  <div class="footer_1i">
+	    <h4 class="col_brown mb-4">Category</h4>
+		   <div class="row footer_1ism">
+		 <h6 class="fw-normal col-md-12 col-6"><a class="text-light" href="#"> Economics</a></h6>
+	 <h6 class="fw-normal mt-2 col-md-12 col-6"><a class="text-light" href="#"> Natural</a></h6>
+	 <h6 class="fw-normal mt-2 col-md-12 col-6"><a class="text-light" href="#"> Architecture</a></h6>
+	 <h6 class="fw-normal mt-2 col-md-12 col-6"><a class="text-light" href="#"> Electrical</a></h6>
+	 <h6 class="fw-normal mt-2 col-md-12 col-6"><a class="text-light" href="#"> Biological</a></h6>
+	 <h6 class="fw-normal mt-2 col-md-12 col-6 mb-0"><a class="text-light" href="#"> Psychology</a></h6>
+	    </div>
+	  </div>
+	 </div>
+	 <div class="col-md-2">
+	  <div class="footer_1i">
+	    <h4 class="col_brown mb-4">Useful Link</h4>
+		   <div class="row footer_1ism">
+		 <h6 class="fw-normal col-md-12 col-6"><a class="text-light" href="#"> Home</a></h6>
+	 <h6 class="fw-normal mt-2 col-md-12 col-6"><a class="text-light" href="#"> About</a></h6>
+	 <h6 class="fw-normal mt-2 col-md-12 col-6"><a class="text-light" href="#"> Course</a></h6>
+	 <h6 class="fw-normal mt-2 col-md-12 col-6"><a class="text-light" href="#"> Our Policy</a></h6>
+	 <h6 class="fw-normal mt-2 col-md-12 col-6"><a class="text-light" href="#"> Pricing</a></h6>
+	 <h6 class="fw-normal mt-2 col-md-12 col-6 mb-0"><a class="text-light" href="#"> Faq</a></h6>
+	    </div>
+	  </div>
+	 </div>
+	 <div class="col-md-4">
+	  <div class="footer_1i">
+	    <h4 class="col_brown mb-4">Contact Us</h4>
+		 <p class="text-light">Helped thousands of clients to find the right property for their needs.</p>
+		 <h6 class="mt-4 text-light"><i class="fa fa-map-marker col_brown me-2 fs-4 align-middle"></i> Z793 STower Suat, DB 8513 UK</h6>
+		 <h6 class="mt-4 text-light"><i class="fa fa-microphone col_brown me-2 fs-4 align-middle"></i> +(123) 456-7890</h6>
+		 <h6 class="mt-4 text-light mb-0"><i class="fa fa-headphones col_brown me-2 fs-4 align-middle"></i> info@gmail.com</h6>
+	  </div>
+	 </div>
+	</div>
+  </div>
+ </div>
+</section>
+ </div>
+</div>
+
+<section id="footer_b" class="bg_dark">
+ <div class="container-xl">
+    <div class="footer_b1 row text-center">
+     <div class="col-md-12">
+	   <p class="mb-0 text-light">© 2013 Your Website Name. All Rights Reserved | Design by <a class="col_brown fw-bold" href="http://www.templateonweb.com">TemplateOnWeb</a></p>
+	 </div>
+	</div>
+  </div>
+</section>
+
+<script>
+window.onscroll = function() {myFunction()};
+var navbar_sticky = document.getElementById("navbar_sticky");
+var sticky = navbar_sticky.offsetTop;
+var navbar_height = document.querySelector('.navbar').offsetHeight;
+function myFunction() {
+  if (window.pageYOffset >= sticky + navbar_height) {
+    navbar_sticky.classList.add("sticky")
+	document.body.style.paddingTop = navbar_height + 'px';
+  } else {
+    navbar_sticky.classList.remove("sticky");
+	document.body.style.paddingTop = '0'
+  }
+}
+</script>
+
+</body>
+
+</html>

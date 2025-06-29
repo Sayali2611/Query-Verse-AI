@@ -1,0 +1,506 @@
+/*
+Template Name: Academy
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/* /center_home*/ 
+.center_h {
+  background-image: url(../img/BuildingIndex.jpeg);
+  background-position: center;
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; 
+  }
+  .center_hm {
+  background: #0000009c;
+  }
+  .form-check-input:checked{
+  background:#1a2844;
+  border-color:#1a2844; 
+   }
+  .form-check-input:checked[type=radio]{
+  background-image:none; 
+   }
+  .center_h1l{
+  padding-top:150px; 
+   }
+  .center_h1r .button_1:hover{
+  background:#1a2844;
+   }
+  /* /center_home_end*/
+  
+  /* /course*/ 
+  .course_2 .nav-tabs {
+  border:none; 
+  }
+  .course_2 .nav-tabs .nav-link {
+  border-radius: 5px;
+  border:1px solid #fff;
+  color: #1a2844;
+  background:#fdfafb; 
+  margin: 0 5px 0px 0px;
+  padding: 12px 20px;
+  font-weight:bold;
+  }
+  .course_2 .nav-tabs .nav-link:hover {
+  color: #fff;
+  background:#0D2D62;
+  border:1px solid #0D2D62;
+  }
+  .course_2 .nav-tabs .nav-link.active {
+  border:1px solid #0D2D62;
+  color: #fff;
+  background:#0D2D62;
+  }
+  /* /course_end*/ 
+  
+  /* /learn*/ 
+  .learn_2i{
+  opacity:0.9; 
+  cursor:pointer;
+   }
+  .learn_2i:hover{
+  opacity:1; 
+   }
+  .about_h1l2{
+  bottom:-70px; 
+   }
+  .about_h2{
+  margin-top:80px; 
+   }
+  
+  /*learn_end*/
+  
+  /*event*/
+  .event_1li{
+  border-radius:5px 5px 0px 0px; 
+   }
+  .event_1li1{
+  border-radius:0px 0px 5px 5px; 
+   }
+  .event_1r .course_1r .button:hover{
+  background:#0D2D62; 
+  
+   }
+  /*event_end*/
+  
+  /*prize*/
+  .prize_1l{
+  padding:80px 100px; 
+   }
+  .prize_1lil span{
+  width:120px;
+  height:120px;
+  line-height:120px; 
+   }
+  /*prize_end*/
+  
+  
+  @media screen and (max-width : 767px){
+  .center_hm {
+  padding-top:20px!important;
+  padding-bottom:20px!important; 
+   }
+  .center_hm br{
+  display:none;
+   }
+  .center_h1l{
+  padding-top:0;
+  text-align:center;
+  margin-bottom:15px;
+   }
+  .center_h1l p{
+  text-align:left;
+   }
+  .center_h1l h2{
+  font-size:22px;
+   }
+  .center_h1r h3{
+  font-size:22px;
+  text-align:center; 
+   }
+  .center_h1r .button_1{
+  display:block;
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center; 
+   }
+  .spec_1i{
+  margin-top:8px;
+  margin-bottom:8px; 
+   }
+  .course_1r {
+  text-align:center!important;
+  margin-top:15px; 
+   }
+  .course_1l {
+  text-align:center;
+   }
+  .course_2 .nav-tabs .nav-link{
+  margin-top:5px;
+  margin-bottom:5px;  
+   }
+  .about_h1l img{
+  width:100%; 
+   }
+  .about_h1l2 {
+  position:static!important;
+  margin-top:15px; 
+   }
+  .about_h1r{
+  margin-top:15px;
+  text-align:center;
+   }
+  .about_h1r p{
+  text-align:left;
+   }
+  .about_h1r .fw-bold{
+  text-align:left; 
+   }
+  .about_h2{
+  margin-top:20px; 
+   }
+  .about_h2l h3{
+  text-align:center; 
+   }
+  .event_1li1 .button{
+  display:block;
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;  
+   }
+  .event_1r{
+  margin-top:15px; 
+   }
+  .course_1l p{
+  text-align:left;  
+   }
+  
+  .prize_1l {
+  padding:30px 15px;
+  text-align:center; 
+   }
+  .prize_1l p{
+  text-align:left; 
+   }
+  .prize_1lir{
+  margin-top:15px; 
+   }
+  
+   }
+  
+  @media (min-width:576px) and (max-width:767px) {
+  
+  
+   }
+  @media (min-width:768px) and (max-width:991px) {
+  .center_hm {
+  padding-top:20px!important;
+  padding-bottom:20px!important; 
+   }
+  .spec_1i .font_60{ 
+  font-size:30px; 
+   }
+  .spec_1i h5{ 
+  font-size:14px; 
+   }
+  .learn_2i h6{
+  font-size:12px;  
+   }
+  .learn_2i .font_60{ 
+  font-size:30px; 
+   }
+  .about_h1l img{
+  width:100%; 
+   }
+  .course_1r .button{
+  padding: 1rem 0.5rem;
+   }
+  .prize_1l {
+  padding:30px 15px;
+   }
+  .prize_1lil span {
+  width: 80px;
+  height: 80px;
+  line-height:80px;
+  font-size:40px;
+  }
+   }
+  
+  @media (min-width:992px) and (max-width:1200px) {
+  .course_1r .button{
+  padding: 1rem 1rem;
+   }
+  .prize_1l {
+  padding:30px 15px;
+   }
+   }
+  @media (min-width:1201px) and (max-width:1330px) {
+  
+   }
+  
+  
+  */team*/
+  .team_1 {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+  
+  .team_1i {
+      flex: 1;
+      margin: 0 10px;
+      box-sizing: border-box;
+      border: 2px solid #e0e0e0; /* Subtle border color */
+      border-radius: 10px; /* Rounded corners for a modern look */
+      overflow: hidden; /* Ensures the border-radius works with child elements */
+      transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .team_1i:hover {
+      border-color: #0D2D62; /* Highlight border color on hover (matches your theme) */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow on hover */
+  }
+  
+  .team_1i1 {
+      position: relative;
+      overflow: hidden;
+  }
+  
+  .team_1i3 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      text-align: center;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+  }
+  
+  .team_1i:hover .team_1i3 {
+      transform: translateY(0);
+  }
+  
+  /*team_end*/
+  /*why-sigce*/
+  #why-sigce {
+      background: #f9f9f9; /* Light background for the section */
+      padding: 50px 0;
+  }
+  
+  .why-sigce-list {
+      list-style-type: disc; /* Bullet points for the list */
+      padding-left: 20px; /* Indentation for the list */
+  }
+  
+  .why-sigce-list li {
+      margin-bottom: 15px; /* Space between list items */
+      font-size: 16px; /* Font size for readability */
+      line-height: 1.6; /* Line height for better spacing */
+  }
+  
+  .why-sigce-list li strong {
+      color: #0D2D62; /* Highlight color for key phrases */
+  }
+  
+  /*why-sigce_end*/
+  
+  /***************** AUTH MODAL STYLES *****************/
+  .auth-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+    }
+    
+    .auth-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 30px;
+      border-radius: 10px;
+      width: 400px;
+      max-width: 90%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    
+    .close-modal {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #0D2D62;
+    }
+    
+    .auth-tabs {
+      display: flex;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #e0e0e0;
+    }
+    
+    .auth-tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #555;
+    }
+    
+    .auth-tab.active {
+      color: #0D2D62;
+      border-bottom: 3px solid #0D2D62;
+    }
+    
+    .auth-form input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    .auth-form button {
+      background-color: #0D2D62;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    
+    .auth-form button:hover {
+      background-color: #8a172d;
+    }
+    
+    .auth-switch {
+      text-align: center;
+      margin-top: 15px;
+      color: #555;
+    }
+    
+    .auth-switch a {
+      color: #0D2D62;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    
+    .error-message {
+      color: #0D2D62;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    
+    /* Chatbot button (will show after login) */
+    .chatbot-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #0D2D62;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: none; /* Hidden by default */
+    }
+    
+    .chatbot-btn i {
+      font-size: 24px;
+    }
+    /***************** USER PROFILE DROPDOWN *****************/
+  .user-profile {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .user-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #0D2D62;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-left: 15px;
+    }
+    
+    .user-dropdown {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: white;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 5px;
+      padding: 10px 0;
+    }
+    
+    .user-dropdown a {
+      color: #333;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .user-dropdown a:hover {
+      background-color: #f1f1f1;
+    }
+    
+    .user-dropdown.show {
+      display: block;
+    }
+    
+    .user-info {
+      padding: 10px 15px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .user-email {
+      font-size: 14px;
+      color: #666;
+      word-break: break-all;
+    }
+    /* Style for the left column containing the image */
+  .about_h1 .col-md-6:first-child { /* Selects the first col-md-6 within about_h1 */
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically (if needed) */
+  }
+  
+  /* Optional: Adjust image styling if needed */
+  .about_h1 .col-md-6:first-child .about_h1l1 img {
+    max-width: 80%; /* Make sure the image doesn't exceed the column width */
+    height: auto;
+    display: block; /* Remove any potential inline spacing */
+  }
+  
+  /* On smaller screens (when columns stack) you might want to center the image within its full width */
+  @media (max-width: 767px) {
+    .about_h1 .col-md-6:first-child {
+      justify-content: center; /* Center horizontally when stacked */
+      align-items: flex-start; /* Align items to the top when stacked */
+    }
+  }

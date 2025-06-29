@@ -1,0 +1,103 @@
+/*
+Template Name: Academy
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************about****************/
+.center_about{
+    background-image: url(../img/78.jpg);
+    background-position: center;
+    }
+    .team_1i3 ul li a{
+    background: #0000009c; 
+     }
+    .team_1i3{
+    width:90%;
+    left:5%;
+    bottom:-120px;
+     }
+    .team_1i:hover .team_1i3{
+    background:#c9dbf29c!important;
+    color:#fff;
+     }
+    .team_o{
+    padding-bottom:160px;
+     }
+    #testim .carousel-indicators {
+    bottom: -50px;
+    }
+    .center_team{
+    background-image: url(../img/37.jpg);
+    background-position: center;
+    }
+    .team_1o{
+    margin-top:145px; 
+     }
+    /*********************about_end****************/
+    
+    
+    
+    @media screen and (max-width : 767px){
+    .about_pg1l h6{
+    text-align:center; 
+     }
+    .about_pg1l{
+    margin-bottom:15px; 
+     }
+    .qual_1i {
+    text-align:center;
+    margin-top:8px;
+    margin-bottom:8px; 
+     }
+    .qual_1ir{
+    margin-top:10px; 
+     }
+    .team_1i3{
+    position:static!important;
+    width:100%;
+     }
+    .team_o {
+    padding-bottom:30px;
+    }
+    .testim_1i h3{
+    text-align:left; 
+     }
+    .testim_1i p{
+    text-align:left; 
+     }
+    .testim_1i br{
+    display:none; 
+     }
+     }
+    
+    @media (min-width:576px) and (max-width:767px) {
+    
+    
+     }
+    @media (min-width:768px) and (max-width:991px) {
+    .about_pg1r img{
+    min-height:400px;
+     }
+    .team_1i3 ul li {
+    margin-top:5px;
+    margin-bottom:5px; 
+     }
+    #testim br{
+    display:none; 
+     }
+     }
+    
+    @media (min-width:992px) and (max-width:1200px) {
+    .about_pg1r img{
+    min-height:400px;
+     }
+    .team_1i3 ul li {
+    margin-top:5px;
+    margin-bottom:5px; 
+     }
+     }
+    @media (min-width:1201px) and (max-width:1330px) {
+    
+     }

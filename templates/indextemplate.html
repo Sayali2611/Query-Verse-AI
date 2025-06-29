@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIGCE</title>
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="static/css/global.css" rel="stylesheet">
+    <link href="static/css/index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        /* Admin Dashboard Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 8px;
+        }
+
+        .close-admin, .close-modal {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-admin:hover, .close-modal:hover {
+            color: black;
+        }
+
+        .admin-tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .tab-btn.active {
+            border-bottom: 2px solid #d9534f;
+            color: #d9534f;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #343a40;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        .text-success {
+            color: #28a745;
+        }
+
+        .text-danger {
+            color: #dc3545;
+        }
+
+        /* User profile dropdown */
+        .user-profile {
+            position: relative;
+            display: inline-block;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #d9534f;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .user-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .user-dropdown.show {
+            display: block;
+        }
+
+        .user-info {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        #logoutBtn {
+            display: block;
+            padding: 8px 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        #logoutBtn:hover {
+            background: #f5f5f5;
+        }
+
+     /* Enhanced Chatbot Button Styles */
+	 #chatbotBtn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 200px;
+    right: 80px;
+    height: 300px;
+    width: 270px;
+    background: transparent;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(90, 186, 221, 0.6);
+    z-index: 9999;
+    padding: 20px;
+    border: 4px solid #0aa4e7; /* NEW: Light blue border */
+    box-sizing: border-box; /* NEW: Ensures border fits within dimensions */
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: pulseGlow 2s infinite ease-in-out;
+    overflow: hidden;
+}
+
+#chatbotBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(93, 208, 226, 0.8);
+    border-color: #4ab0e6; /* NEW: Darker blue on hover */
+    animation-play-state: paused;
+}
+
+#chatbotBtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('static/img/46.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Remove opacity to show full image colors */
+    opacity: 1;
+    z-index: -1;
+    /* Add white background behind image in case it has transparency */
+    background-color: white;
+}
+
+
+/* Adjust the pulse animation to use blue instead of red */
+@keyframes pulseGlow {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(95, 179, 210, 0.7);
+    }
+    50% {
+        transform: scale(1.03);
+        box-shadow: 0 0 0 20px rgba(124, 199, 226, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(124, 199, 226, 0);
+    }
+}
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            #chatbotBtn {
+                height: 100px;
+                width: 250px;
+                right: 20px;
+                bottom: 20px;
+                font-size: 18px;
+            }
+            
+            #chatbotBtn .chat-icon {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        /* Admin button */
+        #adminBtn {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 999;
+        }
+
+        /* Courses Section Styles */
+        .course_3im {
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .course_3im:hover {
+            transform: translateY(-5px);
+        }
+
+        .course_3im1 img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .course_3im2 {
+            background: #fff;
+            padding: 20px;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .shadow_box {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .col_yell {
+            color: #ffc107;
+        }
+
+        /* Make sure the tab content is visible */
+        .tab-content {
+            display: block !important;
+        }
+
+        /* Active tab styling */
+        .nav-tabs .nav-link.active {
+            color: #d9534f;
+            border-bottom: 2px solid #d9534f;
+        }
+
+		    /* Stats Section Styles */
+			#spec {
+        padding: 30px 0; /* Reduced vertical padding */
+        background-color: #0D2D62; /* Original brown color */
+    }
+    
+    .spec_1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .spec_1i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        height: 100%;
+    }
+    
+    .spec_1i h5 {
+        color: white;
+        font-weight: normal;
+        margin-bottom: 0;
+        font-size: 18px;
+        display: inline-block;
+    }
+    
+    .font_60 {
+        font-size: 40px;
+        line-height: 1;
+        vertical-align: middle;
+        margin-right: 10px;
+        color: white;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+        .spec_1i {
+            padding: 12px;
+        }
+        
+        .spec_1i h5 {
+            font-size: 16px;
+        }
+        
+        .font_60 {
+            font-size: 35px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .spec_1i {
+            padding: 10px;
+            justify-content: flex-start;
+        }
+        
+        .spec_1i h5 {
+            font-size: 15px;
+        }
+        
+        .font_60 {
+            font-size: 30px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .spec_1i {
+            padding: 8px;
+        }
+        
+        .spec_1i h5 {
+            font-size: 14px;
+        }
+        
+        .font_60 {
+            font-size: 25px;
+            margin-right: 8px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="adminBtn" style="display:none;">
+        <button class="btn btn-danger">Admin Dashboard</button>
+    </div>
+  <!-- Admin Modal -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <span class="close-admin">&times;</span>
+            <h2>Admin Dashboard</h2>
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="users">Registered Users</button>
+                <button class="tab-btn" data-tab="logs">Login Activity</button>
+            </div>
+            <div id="usersTab" class="tab-content active">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Registered At</th>
+                            <th>Last Login</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTable"></tbody>
+                </table>
+            </div>
+            <div id="logsTab" class="tab-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                            <th>IP Address</th>
+                        </tr>
+                    </thead>
+                    <tbody id="logsTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content" style="max-width: 500px;">
+            <span class="close-modal">&times;</span>
+
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="loginTab">Login</div>
+                <div class="auth-tab" id="registerTab">Register</div>
+            </div>
+
+			 <!-- Login Form - Updated to accept email or phone -->
+            <div id="loginForm" class="auth-form">
+                <div class="mb-3">
+                    <input type="text" id="loginId" class="form-control" placeholder="Email or Phone Number" required>
+                </div>
+                <div class="mb-3">
+                    <input type="password" id="loginPassword" class="form-control" placeholder="Password" required>
+                </div>
+                <div id="loginError" class="error-message text-danger mb-3"></div>
+                <button id="loginBtn" class="btn btn-primary w-100">Login</button>
+                <div class="auth-switch text-center mt-3">
+                    Don't have an account? <a href="#" id="showRegister">Register</a>
+                </div>
+            </div>
+
+			<!-- Register Form - Added phone number field -->
+            <div id="registerForm" class="auth-form" style="display:none;">
+                <div class="mb-3">
+                    <input type="text" id="registerName" class="form-control" placeholder="Full Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" id="registerEmail" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="mb-3">
+                    <input type="tel" id="registerPhone" class="form-control" placeholder="Phone Number (+91XXXXXXXXXX)" required>
+                    <small class="text-muted">Format: +91 followed by 10 digits</small>
+                </div>
+                <div class="mb-3">
+                    <input type="password" id="registerPassword" class="form-control" placeholder="Password" required>
+                    <small class="text-muted">Minimum 8 characters</small>
+                </div>
+                <div class="mb-3">
+                    <input type="password" id="registerConfirm" class="form-control" placeholder="Confirm Password" required>
+                </div>
+                <div id="registerError" class="error-message text-danger mb-3"></div>
+                <button id="registerBtn" class="btn btn-primary w-100">Register</button>
+                <div class="auth-switch text-center mt-3">
+                    Already have an account? <a href="#" id="showLogin">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<div id="chatbotBtn" class="chatbot-btn">
+        <div class="chat-content">
+            <div class="chat-icon"></div>
+            <a href="{{ url_for('chatbot') }}"></a>
+        </div>
+    </div>
+
+    <!-- Keep all your existing sections (header, courses, about, footer etc.) -->
+    
+	<section id="top" class="pt-3 pb-3">
+		<div class="container-xl">
+		 <div class="row top_1">
+		  <div class="col-md-4">
+		   <div class="top_1l">
+		   <h4 class="mb-0"><a class="col_brown"href="{{ url_for('home') }}"><span class="span_1 text-uppercase"><img src="static/img/11.jpg" height="50px",width="40px">   SIGCE</span> <br> <span class="font_12 span_2 text-muted fw-normal"></a></h4>
+		   </div>
+		  </div>
+		  <div class="col-md-8">
+		   <div class="top_1r">
+			  <div class="top_1ri row">
+			   <div class="col-md-4">
+				<div class="top_1ri1">
+				 <span class="d-inline-block text-center border_1 span_1 rounded-circle float-start me-2"><i class="fa fa-phone"></i></span>
+				 <h6 class="font_14 mb-0"><span class="span_2 fw-bold d-inline-block mb-1">Call Now</span> <br> ‪‪+91-8080949300‬‬</h6>
+				</div>
+			   </div>
+			   <div class="col-md-4">
+				<div class="top_1ri1">
+				 <span class="d-inline-block text-center border_1 span_1 rounded-circle float-start me-2"><i class="fa fa-envelope"></i></span>
+				 <h6 class="font_14 mb-0"><span class="span_2 fw-bold d-inline-block mb-1">Send Message</span> <br> contactus@sigce.edu.in</h6>
+				</div>
+			   </div>
+			   <div class="col-md-4">
+				<div class="top_1ri1">
+				 <span class="d-inline-block text-center border_1 span_1 rounded-circle float-start me-2"><i class="fa fa-map-marker"></i></span>
+				 <h6 class="font_14 mb-0"><span class="span_2 fw-bold d-inline-block mb-1">Our Location</span> <br>Plot No. 1, Sector 8, Ghansoli, Navi Mumbai -400701</h6>
+				</div>
+			   </div>
+			  </div>
+		   </div>
+		  </div>
+		 </div>
+		</div>
+	   </section>
+	   <section id="header">
+	   <nav class="navbar navbar-expand-md navbar-light bg_light p-0" id="navbar_sticky">
+		 <div class="container-xl">
+		   <a class="col_brown navbar-brand p-0  fw-bold me-5"href="{{ url_for('home') }}"><span class="span_1 text-uppercase"><img src="static/img/11.jpg" height="50px",width="40px"> </i>SIGCE</span> <br> <span class="font_12 span_2 text-muted fw-normal"></span></a>
+		   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			 <span class="navbar-toggler-icon"></span>
+		   </button>
+		   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav mb-0">
+			   
+			   <li class="nav-item">
+				   <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Home</a>
+				 </li>
+				
+			   <li class="nav-item">
+				   <a class="nav-link" href="{{ url_for('about') }}">About</a>
+			   </li>
+	   
+			   <li class="nav-item">
+				 <a class="nav-link" href="{{ url_for('team') }}">Team </a>
+			   </li>
+			   
+			   <!-- <li class="nav-item">
+				 <a class="nav-link" href="{{ url_for('contact') }}">Contact </a>
+			   </li>
+	    -->
+			 </ul>
+		   </div>
+		 </div>
+	   </nav>
+	   </section>
+	   
+	   <section id="center" class="center_h">
+		<div class="center_hm pt-5 pb-5">
+		 <div class="container-xl">
+		  <div class="center_h1 row">
+		   <div class="col-md-7">
+			<div class="center_h1l">
+			 <h2 class="text-white">Inspiration, Innovation and Discovery<br></h2>
+			 <p class="mt-3 text-light">The first thing to remember about success is that it is a process nothing more, nothing less. There is really no magic to it and it’s not reserved only for a select few people.</p>
+			  <h6 class="mb-0 mt-4"><a class="button" href="#">Learn More</a></h6>
+			</div>
+		   </div>
+		  </div>
+		</div>
+		</div>
+	   </section>
+	   
+
+	   <section id="spec" class="py-4 bg_brown"> <!-- Reduced vertical padding -->
+		<div class="container-xl">
+			<div class="row spec_1 gx-3"> <!-- Horizontal gutter only -->
+				<div class="col-md-3 col-6">
+					<div class="spec_1i p-3 h-100 text-center">
+						<i class="fa fa-user me-2 font_60 lh-1 align-middle text-white"></i>
+						<h5 class="text-white fw-normal mb-0 d-inline">1000 + students</h5>
+					</div>
+				</div>
+				<div class="col-md-3 col-6">
+					<div class="spec_1i p-3 h-100 text-center">
+						<i class="fa fa-building me-2 font_60 lh-1 align-middle text-white"></i>
+						<h5 class="text-white fw-normal mb-0 d-inline">50 + Companies</h5>
+					</div>
+				</div>
+				<div class="col-md-3 col-6">
+					<div class="spec_1i p-3 h-100 text-center">
+						<i class="fa fa-graduation-cap me-2 font_60 lh-1 align-middle text-white"></i>
+						<h5 class="text-white fw-normal mb-0 d-inline">95% Results</h5>
+					</div>
+				</div>
+				<div class="col-md-3 col-6">
+					<div class="spec_1i p-3 h-100 text-center">
+						<i class="fa fa-trophy me-2 font_60 lh-1 align-middle text-white"></i>
+						<h5 class="text-white fw-normal mb-0 d-inline">great place to study</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	   <section id="course" class="p_3">
+		<div class="container-xl">
+		  <div class="row course_1">
+			<div class="col-md-9">
+			 <div class="course_1l">
+			  <h3 class="mb-0">Our Popular Courses</h3>
+			 </div>
+			</div>
+			<div class="col-md-3">
+			 <div class="course_1r text-end">
+			   <h6 class="mb-0"><a class="button" href="#">All Courses</a></h6>
+			 </div>
+			</div>
+		  </div>
+		  <div class="row course_2 mt-4">
+		   <div class="col-md-12">
+			   </div>
+		  </div>
+		  <div class="row course_3 mt-4">
+			<div class="tab-content">
+		   <div class="tab-pane active" id="home">
+			   <div class="course_3i row">
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/2.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <!-- <h6><img src="static/img/8.jpg" class="rounded-circle me-2" alt="abc">CE</h6> -->
+				   <h5 class="mt-3 mb-3"><a href="#">Computer Engineering</a></h5>
+				   <h5>(CE)</h5>
+				   <span class="col_yell me-3">
+					   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0">HOD - Dr. Kishor T Patil</h6>
+				  </div>
+				 </div>
+				</div>
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/3.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <!-- <h6><img src="static/img/9.jpg" class="rounded-circle me-2" alt="abc">AIDS</h6> -->
+				   <h5 class="mt-3 mb-3"><a href="#">Artificial Intelligence & Data Science (AIDS)</a></h5>
+				   <span class="col_yell me-3">
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star-half-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0">HOD - Dr. Madhu M. Nashipudimathi</h6>
+				  </div>
+				 </div>
+				</div>
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/4.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <!-- <h6><img src="static/img/10.jpg" class="rounded-circle me-2" alt="abc"> Lorem Quis</h6> -->
+				   <h5 class="mt-3 mb-3"><a href="#">Artificial Intelligence & Machine Learning (AIML)</a></h5>
+				   <span class="col_yell me-3">
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star-half-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0">HOD - AI and ML - Prof. Sonali Deshpande</h6>
+				  </div>
+				 </div>
+				</div>
+			   </div>
+			   <div class="course_3i row mt-4">
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/5.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <!-- <h6><img src="static/img/8.jpg" class="rounded-circle me-2" alt="abc">IOT</h6> -->
+				   <h5 class="mt-3 mb-3"><a href="#">IOT and Cybersecurity & Blockchain</a></h5>
+				   <span class="col_yell me-3">
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0">HOD - Dr. Madhu M. Nashipudimath</h6>
+				  </div>
+				 </div>
+				</div>
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/6.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <!-- <h6><img src="static/img/9.jpg" class="rounded-circle me-2" alt="abc"></h6> -->
+				   <h5 class="mt-3 mb-3"><a href="#">Mechanical Engineering</a></h5>
+				   <span class="col_yell me-3">
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0">HOD - Prof. Vishwadeep Sardar</h6>
+				  </div>
+				 </div>
+				</div>
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/7.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <!-- <h6><img src="static/img/10.jpg" class="rounded-circle me-2" alt="abc"> Lorem Quis</h6> -->
+				   <h5 class="mt-3 mb-3"><a href="#">Electrical Engineering</a></h5>
+				   <span class="col_yell me-3">
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0">HOD - Prof. Nishant B Joshi</h6>
+				  </div>
+				 </div>
+				</div>
+			   </div>
+		   </div>
+		   <div class="tab-pane" id="profile">
+				<div class="course_3i row">
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/5.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <h6><img src="static/img/8.jpg" class="rounded-circle me-2" alt="abc"> Eget Porta</h6>
+				   <h5 class="mt-3 mb-3"><a href="#">Aeronautical & Manufacturing Engineering</a></h5>
+				   <span class="col_yell me-3">
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star"></i>
+					   <i class="fa fa-star-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0"><i class="fa fa-user col_brown me-1"></i> 10 students <i class="fa fa-book col_brown me-1 ms-2"></i> 03 lessons <span class="text-decoration-line-through text-muted mx-2">$120</span> <span class="col_brown">$60</span></h6>
+				  </div>
+				 </div>
+				</div>
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/6.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <h6><img src="static/img/9.jpg" class="rounded-circle me-2" alt="abc"> Ipsum Amet</h6>
+				   <h5 class="mt-3 mb-3"><a href="#">Business & Management Studies</a></h5>
+				   <span class="col_yell me-3">
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star-half-o"></i>
+				   <i class="fa fa-star-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0"><i class="fa fa-user col_brown me-1"></i> 14 students <i class="fa fa-book col_brown me-1 ms-2"></i> 06 lessons <span class="text-decoration-line-through text-muted mx-2">$160</span> <span class="col_brown">$70</span></h6>
+				  </div>
+				 </div>
+				</div>
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/7.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+					 <div class="course_3im1i1 position-absolute w-100 top-0 clearfix p-3">
+					 <h6 class="mb-0"><a class="bg_brown d-inline-block px-3 pt-2 pb-2 text-white font_14 rounded-3" href="#"> Psychology</a></h6>
+				  </div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <h6><img src="static/img/10.jpg" class="rounded-circle me-2" alt="abc"> Lorem Quis</h6>
+				   <h5 class="mt-3 mb-3"><a href="#">History of Art, Architecture & Design</a></h5>
+				   <span class="col_yell me-3">
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star-half-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0"><i class="fa fa-user col_brown me-1"></i> 12 students <i class="fa fa-book col_brown me-1 ms-2"></i> 04 lessons <span class="text-decoration-line-through text-muted mx-2">$140</span> <span class="col_brown">$50</span></h6>
+				  </div>
+				 </div>
+				</div>
+			   </div>
+		   </div>
+		   
+		   <div class="tab-pane" id="profile1">
+				<div class="course_3i row">
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/2.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+					 <div class="course_3im1i1 position-absolute w-100 top-0 clearfix p-3">
+					 <h6 class="mb-0"><a class="bg_brown d-inline-block px-3 pt-2 pb-2 text-white font_14 rounded-3" href="#"> Business</a></h6>
+				  </div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <h6><img src="static/img/8.jpg" class="rounded-circle me-2" alt="abc"> Eget Porta</h6>
+				   <h5 class="mt-3 mb-3"><a href="#">Aeronautical & Manufacturing Engineering</a></h5>
+				   <span class="col_yell me-3">
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0"><i class="fa fa-user col_brown me-1"></i> 10 students <i class="fa fa-book col_brown me-1 ms-2"></i> 03 lessons <span class="text-decoration-line-through text-muted mx-2">$120</span> <span class="col_brown">$60</span></h6>
+				  </div>
+				 </div>
+				</div>
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/3.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+					 <div class="course_3im1i1 position-absolute w-100 top-0 clearfix p-3">
+					 <h6 class="mb-0"><a class="bg_brown d-inline-block px-3 pt-2 pb-2 text-white font_14 rounded-3" href="#"> Politics</a></h6>
+				  </div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <h6><img src="static/img/9.jpg" class="rounded-circle me-2" alt="abc"> Ipsum Amet</h6>
+				   <h5 class="mt-3 mb-3"><a href="#">Business & Management Studies</a></h5>
+				   <span class="col_yell me-3">
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star-half-o"></i>
+				   <i class="fa fa-star-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0"><i class="fa fa-user col_brown me-1"></i> 14 students <i class="fa fa-book col_brown me-1 ms-2"></i> 06 lessons <span class="text-decoration-line-through text-muted mx-2">$160</span> <span class="col_brown">$70</span></h6>
+				  </div>
+				 </div>
+				</div>
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/4.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+					 <div class="course_3im1i1 position-absolute w-100 top-0 clearfix p-3">
+					 <h6 class="mb-0"><a class="bg_brown d-inline-block px-3 pt-2 pb-2 text-white font_14 rounded-3" href="#"> Psychology</a></h6>
+				  </div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <h6><img src="static/img/10.jpg" class="rounded-circle me-2" alt="abc"> Lorem Quis</h6>
+				   <h5 class="mt-3 mb-3"><a href="#">History of Art, Architecture & Design</a></h5>
+				   <span class="col_yell me-3">
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star-half-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0"><i class="fa fa-user col_brown me-1"></i> 12 students <i class="fa fa-book col_brown me-1 ms-2"></i> 04 lessons <span class="text-decoration-line-through text-muted mx-2">$140</span> <span class="col_brown">$50</span></h6>
+				  </div>
+				 </div>
+				</div>
+			   </div>
+		   </div>
+		   
+		   <div class="tab-pane" id="profile2">
+				<div class="course_3i row">
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/5.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+					 <div class="course_3im1i1 position-absolute w-100 top-0 clearfix p-3">
+					 <h6 class="mb-0"><a class="bg_brown d-inline-block px-3 pt-2 pb-2 text-white font_14 rounded-3" href="#"> Business</a></h6>
+				  </div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <h6><img src="static/img/8.jpg" class="rounded-circle me-2" alt="abc"> Eget Porta</h6>
+				   <h5 class="mt-3 mb-3"><a href="#">Aeronautical & Manufacturing Engineering</a></h5>
+				   <span class="col_yell me-3">
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0"><i class="fa fa-user col_brown me-1"></i> 10 students <i class="fa fa-book col_brown me-1 ms-2"></i> 03 lessons <span class="text-decoration-line-through text-muted mx-2">$120</span> <span class="col_brown">$60</span></h6>
+				  </div>
+				 </div>
+				</div>
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/6.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+					 <div class="course_3im1i1 position-absolute w-100 top-0 clearfix p-3">
+					 <h6 class="mb-0"><a class="bg_brown d-inline-block px-3 pt-2 pb-2 text-white font_14 rounded-3" href="#"> Politics</a></h6>
+				  </div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <h6><img src="static/img/9.jpg" class="rounded-circle me-2" alt="abc"> Ipsum Amet</h6>
+				   <h5 class="mt-3 mb-3"><a href="#">Business & Management Studies</a></h5>
+				   <span class="col_yell me-3">
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star-half-o"></i>
+				   <i class="fa fa-star-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0"><i class="fa fa-user col_brown me-1"></i> 14 students <i class="fa fa-book col_brown me-1 ms-2"></i> 06 lessons <span class="text-decoration-line-through text-muted mx-2">$160</span> <span class="col_brown">$70</span></h6>
+				  </div>
+				 </div>
+				</div>
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/7.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+					 <div class="course_3im1i1 position-absolute w-100 top-0 clearfix p-3">
+					 <h6 class="mb-0"><a class="bg_brown d-inline-block px-3 pt-2 pb-2 text-white font_14 rounded-3" href="#"> Psychology</a></h6>
+				  </div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <h6><img src="static/img/10.jpg" class="rounded-circle me-2" alt="abc"> Lorem Quis</h6>
+				   <h5 class="mt-3 mb-3"><a href="#">History of Art, Architecture & Design</a></h5>
+				   <span class="col_yell me-3">
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star-half-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0"><i class="fa fa-user col_brown me-1"></i> 12 students <i class="fa fa-book col_brown me-1 ms-2"></i> 04 lessons <span class="text-decoration-line-through text-muted mx-2">$140</span> <span class="col_brown">$50</span></h6>
+				  </div>
+				 </div>
+				</div>
+			   </div>
+		   </div>
+		   
+		   <div class="tab-pane" id="profile3">
+				<div class="course_3i row">
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/2.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+					 <div class="course_3im1i1 position-absolute w-100 top-0 clearfix p-3">
+					 <h6 class="mb-0"><a class="bg_brown d-inline-block px-3 pt-2 pb-2 text-white font_14 rounded-3" href="#"> Business</a></h6>
+				  </div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <h6><img src="static/img/8.jpg" class="rounded-circle me-2" alt="abc"> Eget Porta</h6>
+				   <h5 class="mt-3 mb-3"><a href="#">Aeronautical & Manufacturing Engineering</a></h5>
+				   <span class="col_yell me-3">
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0"><i class="fa fa-user col_brown me-1"></i> 10 students <i class="fa fa-book col_brown me-1 ms-2"></i> 03 lessons <span class="text-decoration-line-through text-muted mx-2">$120</span> <span class="col_brown">$60</span></h6>
+				  </div>
+				 </div>
+				</div>
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/3.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+					 <div class="course_3im1i1 position-absolute w-100 top-0 clearfix p-3">
+					 <h6 class="mb-0"><a class="bg_brown d-inline-block px-3 pt-2 pb-2 text-white font_14 rounded-3" href="#"> Politics</a></h6>
+				  </div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <h6><img src="static/img/9.jpg" class="rounded-circle me-2" alt="abc"> Ipsum Amet</h6>
+				   <h5 class="mt-3 mb-3"><a href="#">Business & Management Studies</a></h5>
+				   <span class="col_yell me-3">
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star-half-o"></i>
+				   <i class="fa fa-star-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0"><i class="fa fa-user col_brown me-1"></i> 14 students <i class="fa fa-book col_brown me-1 ms-2"></i> 06 lessons <span class="text-decoration-line-through text-muted mx-2">$160</span> <span class="col_brown">$70</span></h6>
+				  </div>
+				 </div>
+				</div>
+				<div class="col-md-4">
+				 <div class="course_3im clearfix">
+				  <div class="course_3im1 position-relative clearfix">
+					<div class="course_3im1i clearfix">
+					  <div class="grid clearfix">
+						 <figure class="effect-jazz mb-0">
+						   <a href="#"><img src="static/img/4.jpg" class="w-100" alt="abc"></a>
+						 </figure>
+					 </div>
+					</div>
+					 <div class="course_3im1i1 position-absolute w-100 top-0 clearfix p-3">
+					 <h6 class="mb-0"><a class="bg_brown d-inline-block px-3 pt-2 pb-2 text-white font_14 rounded-3" href="#"> Psychology</a></h6>
+				  </div>
+				  </div>
+				  <div class="course_3im2 p-3 shadow_box">
+				   <h6><img src="static/img/10.jpg" class="rounded-circle me-2" alt="abc"> Lorem Quis</h6>
+				   <h5 class="mt-3 mb-3"><a href="#">History of Art, Architecture & Design</a></h5>
+				   <span class="col_yell me-3">
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star"></i>
+				   <i class="fa fa-star-half-o"></i>
+				   </span>
+				   <hr>
+				   <h6 class="font_14 fw-bold mb-0"><i class="fa fa-user col_brown me-1"></i> 12 students <i class="fa fa-book col_brown me-1 ms-2"></i> 04 lessons <span class="text-decoration-line-through text-muted mx-2">$140</span> <span class="col_brown">$50</span></h6>
+				  </div>
+				 </div>
+				</div>
+			   </div>
+		   </div>
+		   
+	   </div>
+		  </div>
+		</div>
+	   </section>
+	   <section id="about_h" class="p_3">
+		<div class="container-xl">
+		  <div class="about_h1 row">
+		   <div class="col-md-6">
+			<div class="about_h1l clearfix position-relative">
+			  <div class="about_h1l1 clearfix">
+			   <img src="static/img/11.jpg" class="rounded-3" alt="abc" height="300px",width="240px">
+			  </div>
+			</div>
+		   </div>
+		   <div class="col-md-6">
+			<div class="about_h1r">
+			   <h2 class="text-center">Why SIGCE</h2>
+			   <p class="text-center">Commitment is something that comes from understanding that everything has its price and then having the willingness to pay that price.</p>
+			   <ul class="why-sigce-list">
+				   <li><strong>Start-up Incubation Center:</strong> With the vision of producing "Job Creators", SIGCE has set up a fully functional Start-up incubation center eco-system.</li>
+				   <li><strong>Campus:</strong> Sprawling new state-of-the-art campus, conveniently located in the heart of Navi Mumbai at Ghansoli, in proximity to Reliance Jio headquarters and Thane-Belapur Industrial Corridor.</li>
+				   <li><strong>Industry-Academia Collaboration:</strong> Dedicated floor for industry-sponsored labs and courses.</li>
+				   <li><strong>Advanced Labs:</strong> Robotics, Mechatronics, 3D Printing offering hands-on learning training courses.</li>
+				   <li><strong>Emerging Technologies:</strong> Offer certified courses in collaboration with industry experts in AI, Blockchain, and Big Data and Analytics.</li>
+				   <li><strong>Theoretical:</strong> 100% placement assistance for qualified students.</li>
+				   <li><strong>Client Synergy:</strong> In today's information-rich environment, it is this synergy which enables the student to think and perform beyond the ordinary.</li>
+			   </ul>
+			 <h6 class="mb-0 mt-4"><a class="button" href="#">Read More</a></h6><br>
+			</div>
+		   </div>
+		  </div>
+	   
+		  <br><br><br>
+		 
+		  </div>
+		</div>
+	   </section>
+	   <div class="main clearfix position-relative">
+		<div class="main_1 clearfix position-absolute w-100">
+		  <section id="subs">
+		<div class="container-xl">
+		 <div class="row subs_1 bg_brown pt-4 pb-4 rounded-3 mx-0 px-2">
+		  <div class="col-md-6">
+		   <div class="subs_1l">
+			<h3 class="text-white">Subscribe</h3>
+			<p class="mb-0 text-light">Now go push your own limits and succeed!</p>
+		   </div>
+		  </div>
+		  <div class="col-md-6">
+		   <div class="subs_1r">
+			 <div class="input-group p-2 rounded-5 bg-white rounded-3">
+					   <input type="text" class="form-control border-0 bg-transparent" placeholder="Enter your email">
+					   <span class="input-group-btn">
+						   <button class="btn btn-primary bg-transparent border-0 fs-6 col_brown" type="button">
+							   <i class="fa fa-long-arrow-right"></i> </button>
+					   </span>
+			   </div>
+		   </div>
+		  </div>
+		 </div>
+		</div>
+	   </section>
+		</div>
+		<div class="main_2 clearfix">
+			<section id="footer">
+		  <div class="footer_m p_3">
+			<div class="container-xl">
+			 <div class="footer_1 row">
+			  <div class="col-md-4">
+			   <div class="footer_1i">
+				<div class="top_1l">
+			<h4 class="mb-0"><a class="text-white"href="{{ url_for('home') }}"><span class="span_1 text-uppercase"><img src="static/img/11.jpg" height="50px",width="40px">  SIGCE</span> <br> <span class="font_12 span_2 text-light fw-normal">Engineering College</span></a></h4>
+				<p class="text-light mt-4">We are a team of Computer Engineering students passionate about creating innovative solutions like our QueryVerse AI.</p>
+				<h5 class="text-white">Follow Us</h5>
+				<ul class="social-network social-circle mb-0 mt-4">
+							<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-skype"></i></a></li>
+							<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+			</div>
+			   </div>
+			  </div>
+		  
+			  <div class="col-md-2">
+				<div class="footer_1i">
+				  <h4 class="col_brown mb-4">Useful Link</h4>
+					  <div class="row footer_1ism">
+						<h6 class="fw-normal col-md-12 col-6"><a class="text-light" href="{{ url_for('home') }}"> Home</a></h6>
+						<h6 class="fw-normal mt-2 col-md-12 col-6"><a class="text-light" href="{{ url_for('about') }}"> About</a></h6>
+						<h6 class="fw-normal mt-2 col-md-12 col-6"><a class="text-light" href="{{ url_for('team') }}"> Team</a></h6>
+						<h6 class="fw-normal mt-2 col-md-12 col-6"><a class="text-light" href="{{ url_for('contact') }}"> Our contact</a></h6>
+				  </div>
+				</div>
+			   </div>
+			   <div class="col-md-4">
+				<div class="footer_1i">
+				  <h4 class="col_brown mb-4">Contact Us</h4>
+					<p class="text-light"><i class="ti-map-alt mr-tp2"></i></p>
+					<h6 class="mt-4 text-light"><i class="fa fa-map-marker col_brown me-2 fs-4 align-middle"></i> Address: <a>Plot No. 1, Sector 8, Ghansoli, Navi Mumbai -400701</a></h6>
+					<h6 class="mt-4 text-light"><i class="fa fa-microphone col_brown me-2 fs-4 align-middle"></i> Contact Number: +91-8080949300, +91-7738921077</h6>
+					<h6 class="mt-4 text-light mb-0"><i class="fa fa-headphones col_brown me-2 fs-4 align-middle"></i> Email ID: contactus@sigce.edu.in
+		  
+					</h6>
+				</div>
+			   </div>
+			  </div>
+			</div>
+		  </div>
+		  </section>
+		   </div>
+		  </div>
+		  
+		   
+		  <section id="footer_b" class="bg_dark">
+			  <div class="container-xl">
+				 <div class="footer_b1 row text-center">
+				  <div class="col-md-12">
+					<p class="mb-0 text-light">© 2025 QueryVerse AI. All Rights Reserved <a class="col_brown fw-bold" href="http://www.templateonweb.com"></a></p>
+				  </div>
+				 </div>
+			   </div>
+			  </section>
+
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // DOM Elements
+    const authModal = document.getElementById('authModal');
+    const adminModal = document.getElementById('adminModal');
+    const chatbotBtn = document.getElementById('chatbotBtn');
+    const adminBtn = document.getElementById('adminBtn');
+    const navbarUl = document.querySelector('.navbar-nav');
+    
+    // Initialize auth UI
+    const authNavItem = document.createElement('li');
+    authNavItem.className = 'nav-item';
+    authNavItem.id = 'authNavItem';
+    navbarUl.appendChild(authNavItem);
+
+    // Tab switching functions
+    function showLoginForm() {
+        document.getElementById('loginTab').classList.add('active');
+        document.getElementById('registerTab').classList.remove('active');
+        document.getElementById('loginForm').style.display = 'block';
+        document.getElementById('registerForm').style.display = 'none';
+        document.getElementById('loginError').textContent = '';
+    }
+
+    function showRegisterForm() {
+        document.getElementById('registerTab').classList.add('active');
+        document.getElementById('loginTab').classList.remove('active');
+        document.getElementById('registerForm').style.display = 'block';
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('registerError').textContent = '';
+    }
+
+    // Phone number validation
+    function validatePhone(phone) {
+        const pattern = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/;
+        return pattern.test(phone);
+    }
+
+    // Check authentication status
+	function checkAuth() {
+        const userEmail = sessionStorage.getItem('user_email');
+        const isAdmin = sessionStorage.getItem('is_admin') === 'true';
+
+        if (userEmail) {
+            // Show user profile dropdown
+            const userName = sessionStorage.getItem('user_name') || 'User';
+            const userPhone = sessionStorage.getItem('user_phone') || '';
+            authNavItem.innerHTML = `
+                <div class="user-profile">
+                    <div class="user-avatar">${userName.charAt(0).toUpperCase()}</div>
+                    <div class="user-dropdown">
+                        <div class="user-info">
+                            <strong>${userName}</strong>
+                            <div class="user-email">${userEmail}</div>
+                            ${userPhone ? `<div class="user-phone">${userPhone}</div>` : ''}
+                        </div>
+                        <a href="#" id="logoutBtn">Logout</a>
+                    </div>
+                </div>`;
+            
+            // Show chatbot button for logged-in users
+            document.getElementById('chatbotBtn').style.display = 'flex';
+            
+            // Toggle dropdown
+            authNavItem.querySelector('.user-avatar').addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector('.user-dropdown').classList.toggle('show');
+            });
+
+            // Logout handler
+            document.getElementById('logoutBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                logoutUser();
+            });
+
+            // Show admin button if admin
+            if (isAdmin) {
+                adminBtn.style.display = 'block';
+                adminBtn.addEventListener('click', showAdminDashboard);
+            }
+        } else {
+            // Show login button
+            authNavItem.innerHTML = '<a class="nav-link login-nav-btn" href="#">Login</a>';
+            authNavItem.querySelector('.login-nav-btn').addEventListener('click', function(e) {
+                e.preventDefault();
+                authModal.style.display = 'block';
+                showLoginForm();
+            });
+            
+            // Hide chatbot button for non-logged-in users
+            document.getElementById('chatbotBtn').style.display = 'none';
+        }
+    }
+
+    // API Functions
+    async function loginUser(loginId, password) {
+        try {
+            const response = await fetch('/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ login_id: loginId, password })
+            });
+            const data = await response.json();
+            
+            if (data.success) {
+                sessionStorage.setItem('user_id', data.user.id);
+                sessionStorage.setItem('user_email', data.user.email);
+                sessionStorage.setItem('user_name', data.user.name);
+                sessionStorage.setItem('user_phone', data.user.phone);
+                sessionStorage.setItem('is_admin', data.user.is_admin);
+                location.reload();
+            } else {
+                document.getElementById('loginError').textContent = data.message || 'Login failed';
+            }
+        } catch (error) {
+            console.error('Login error:', error);
+            document.getElementById('loginError').textContent = 'Network error. Please try again.';
+        }
+    }
+
+    async function registerUser(name, email, phone, password, confirmPassword) {
+        // Client-side validation
+        if (password !== confirmPassword) {
+            document.getElementById('registerError').textContent = 'Passwords do not match';
+            return;
+        }
+
+        if (!validatePhone(phone)) {
+            document.getElementById('registerError').textContent = 'Please enter a valid Indian phone number (+91XXXXXXXXXX)';
+            return;
+        }
+
+        if (password.length < 6) {
+            document.getElementById('registerError').textContent = 'Password must be at least 6 characters';
+            return;
+        }
+
+        try {
+            const response = await fetch('/api/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, phone, password })
+            });
+            const data = await response.json();
+            
+            if (data.success) {
+                showLoginForm();
+                document.getElementById('loginError').textContent = 'Registration successful! Please login';
+                // Clear form
+                document.getElementById('registerName').value = '';
+                document.getElementById('registerEmail').value = '';
+                document.getElementById('registerPhone').value = '';
+                document.getElementById('registerPassword').value = '';
+                document.getElementById('registerConfirm').value = '';
+            } else {
+                document.getElementById('registerError').textContent = data.message || 'Registration failed';
+            }
+        } catch (error) {
+            console.error('Registration error:', error);
+            document.getElementById('registerError').textContent = 'Network error. Please try again.';
+        }
+    }
+
+    async function logoutUser() {
+        try {
+            await fetch('/api/logout', { method: 'POST' });
+            sessionStorage.clear();
+            location.reload();
+        } catch (error) {
+            console.error('Logout error:', error);
+        }
+    }
+
+    async function showAdminDashboard() {
+        try {
+            const response = await fetch('/api/admin/data');
+            if (response.status === 403) {
+                alert("Session expired. Please login again.");
+                logoutUser();
+                return;
+            }
+            
+            const data = await response.json();
+            
+            // Populate users table
+            document.getElementById('usersTable').innerHTML = data.users.map(user => `
+                <tr>
+                    <td>${user.name}</td>
+                    <td>${user.email}</td>
+                    <td>${user.phone || 'N/A'}</td>
+                    <td>${user.registered_at}</td>
+                    <td>${user.last_login}</td>
+                </tr>
+            `).join('');
+            
+            // Populate login logs
+            document.getElementById('logsTable').innerHTML = data.login_logs.map(log => `
+                <tr class="${log.success ? 'text-success' : 'text-danger'}">
+                    <td>${log.email}</td>
+                    <td>${log.timestamp}</td>
+                    <td>${log.success ? 'Success' : 'Failed'}</td>
+                    <td>${log.ip_address || 'N/A'}</td>
+                </tr>
+            `).join('');
+            
+            adminModal.style.display = 'block';
+        } catch (error) {
+            console.error('Admin data error:', error);
+            alert('Failed to load admin data. Please try again.');
+        }
+    }
+
+    // Event Listeners
+    document.querySelector('.close-modal')?.addEventListener('click', () => authModal.style.display = 'none');
+    document.querySelector('.close-admin')?.addEventListener('click', () => adminModal.style.display = 'none');
+    document.getElementById('loginTab')?.addEventListener('click', showLoginForm);
+    document.getElementById('registerTab')?.addEventListener('click', showRegisterForm);
+    document.getElementById('showRegister')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        showRegisterForm();
+    });
+    document.getElementById('showLogin')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        showLoginForm();
+    });
+    
+    document.getElementById('loginBtn')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        const loginId = document.getElementById('loginId').value.trim();
+        const password = document.getElementById('loginPassword').value;
+        
+        if (!loginId) {
+            document.getElementById('loginError').textContent = 'Please enter email or phone number';
+            return;
+        }
+        
+        if (!password) {
+            document.getElementById('loginError').textContent = 'Please enter password';
+            return;
+        }
+        
+        loginUser(loginId, password);
+    });
+
+    document.getElementById('registerBtn')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('registerName').value.trim();
+        const email = document.getElementById('registerEmail').value.trim();
+        const phone = document.getElementById('registerPhone').value.trim();
+        const password = document.getElementById('registerPassword').value;
+        const confirm = document.getElementById('registerConfirm').value;
+        
+        if (!name || !email || !phone || !password || !confirm) {
+            document.getElementById('registerError').textContent = 'All fields are required';
+            return;
+        }
+        
+        registerUser(name, email, phone, password, confirm);
+    });
+
+    document.getElementById('chatbotBtn')?.addEventListener('click', () => {
+        window.location.href = '/chatbot';
+    });
+
+    // Admin tab switching
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(`${this.dataset.tab}Tab`).style.display = 'block';
+        });
+    });
+
+    // Close modals when clicking outside
+    window.addEventListener('click', (e) => {
+        if (e.target === authModal) authModal.style.display = 'none';
+        if (e.target === adminModal) adminModal.style.display = 'none';
+        
+        // Close user dropdown when clicking outside
+        const userDropdown = document.querySelector('.user-dropdown');
+        if (userDropdown && userDropdown.classList.contains('show') && 
+            !e.target.closest('.user-profile')) {
+            userDropdown.classList.remove('show');
+        }
+    });
+
+    // Initialize
+    checkAuth();
+});
+
+// Sticky navbar
+window.onscroll = function() {
+    const navbar = document.getElementById("navbar_sticky");
+    if (!navbar) return;
+    
+    const sticky = navbar.offsetTop;
+    const navbar_height = document.querySelector('.navbar')?.offsetHeight || 0;
+    
+    if (window.pageYOffset >= sticky + navbar_height) {
+        navbar.classList.add("sticky");
+        document.body.style.paddingTop = navbar_height + 'px';
+    } else {
+        navbar.classList.remove("sticky");
+        document.body.style.paddingTop = '0';
+    }
+};
+
+ 
+ 
+    </script>
+</body>
+</html>

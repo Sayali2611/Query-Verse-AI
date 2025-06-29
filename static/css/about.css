@@ -1,0 +1,230 @@
+/*
+Template Name: Academy
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: [https://www.templateonweb.com/](https://www.templateonweb.com/)
+Licence: <a href="[https://www.templateonweb.com/license](https://www.templateonweb.com/license)">Website Template Licence</a>
+*/
+/*********************about****************/
+.center_about {
+    background-image: url(../img/78.jpg);
+    background-position: center;
+  }
+  
+  .team_1i3 ul li a {
+    background: #0000009c;
+  }
+  
+  .team_1i3 {
+    width: 90%;
+    left: 5%;
+    bottom: -120px;
+  }
+  
+  .team_1i:hover .team_1i3 {
+    background:#0000009c !important;
+    color: #fff;
+  }
+  
+  .team_o {
+    padding-bottom: 160px;
+  }
+  
+  #testim .carousel-indicators {
+    bottom: -50px;
+  }
+  
+  .center_team {
+    background-image: url(../img/78.jpg);
+    background-position: center;
+  }
+  
+  .team_1o {
+    margin-top: 145px;
+  }
+  
+  /*********************about_end****************/
+  
+  /* Customizations for Team Member Cards */
+  .team_1 {
+    display: flex;
+    flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+    margin-left: -15px; /* Adjust for potential padding on columns */
+    margin-right: -15px;
+    justify-content: center;
+  }
+  
+  .team_1 .col-md-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px; /* Add vertical spacing for stacked cards */
+  }
+  
+  @media (min-width: 768px) { /* Apply horizontal spacing on medium screens and above */
+    .team_1 .col-md-4 {
+      width: calc(33.333% - 30px); /* Adjust width for margins */
+      margin-left: 15px;
+      margin-right: 300px;
+    }
+  
+    .team_1 {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    .team_1 .col-md-4:first-child {
+      margin-left: 0;
+    }
+  
+    .team_1 .col-md-4:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  .team_1i3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Ensure text itself is centered */
+    min-height: 150px; /* Adjust as needed for consistent box height */
+  }
+  
+  .team_1i1 img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent extra space below image */
+  }
+  
+  /* Optional: Style for the image container if needed */
+  .team_1i1 .grid figure {
+    overflow: hidden; /* Clip any overflowing image parts */
+  }
+  
+  .team_1i1 .grid figure img {
+    transition: transform 0.3s ease-in-out; /* Example hover effect */
+  }
+  
+  .team_1i:hover .team_1i1 .grid figure img {
+    transform: scale(1.05); /* Example hover effect */
+  }
+  
+  /* Adjustments for progress bars in the skills section */
+  .about_h2r .progress-bar {
+    background-color: #ddd; /* Light background for the bar */
+    border-radius: 5px;
+    height: 10px;
+    overflow: hidden; /* Hide rounded corners of inner progress */
+  }
+  
+  .about_h2r .progress-bar .progress {
+    background-color: #0D2D62; /* Your theme color */
+    height: 100%;
+    border-radius: 5px;
+  }
+  
+  /* Style the Key Features list for better readability */
+  #about_pg .about_h2l ul {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0;
+  }
+  
+  #about_pg .about_h2l ul li {
+    margin-bottom: 8px; /* Add spacing between list items */
+    color: #333; /* Consistent text color for features */
+    font-size: 16px; /* Adjust font size if needed */
+  }
+  
+  #about_pg .about_h2l ul li strong {
+    color: #0D2D62; /* Highlight the feature name */
+    font-weight: bold;
+  }
+  
+  #about_pg .about_h2l h3 span {
+    color: #0D2D62; /* Consistent color for the span in the heading */
+  }
+  
+  /* Style the data.json text in the About section */
+  #about_pg .about_pg1l p code {
+    color: #0D2D62; /* Ensure the code text is clearly visible */
+    font-size: 1.1em; /* Make it slightly larger */
+    font-weight: bold; /* Make it bold */
+    background-color: transparent; /* Ensure no background */
+    padding: 0; /* Remove default padding for inline code */
+  }
+  
+  /* Responsive adjustments from your original CSS */
+  @media screen and (max-width : 767px) {
+    .about_pg1l h6 {
+      text-align: center;
+    }
+  
+    .about_pg1l {
+      margin-bottom: 15px;
+    }
+  
+    .qual_1i {
+      text-align: center;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+  
+    .qual_1ir {
+      margin-top: 10px;
+    }
+  
+    .team_1i3 {
+      position: static !important;
+      width: 100%;
+    }
+  
+    .team_o {
+      padding-bottom: 30px;
+    }
+  
+    .testim_1i h3 {
+      text-align: left;
+    }
+  
+    .testim_1i p {
+      text-align: left;
+    }
+  
+    .testim_1i br {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 767px) {
+    /* Add specific styles for small to medium screens if needed */
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    .about_pg1r img {
+      min-height: 400px;
+    }
+  
+    .team_1i3 ul li {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  
+    #testim br {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .about_pg1r img {
+      min-height: 400px;
+    }
+  
+    .team_1i3 ul li {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+  
+  @media (min-width: 1201px) and (max-width: 1330px) {
+    /* Add specific styles for larger screens if needed */
+  }

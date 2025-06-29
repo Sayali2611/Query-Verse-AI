@@ -1,0 +1,1248 @@
+{
+    "queries": [
+        {
+            "question": "When does the admission process start?",
+            "category": "Admission",
+            "answer": "The admission process for the academic year typically starts in May or June. Please check the official website for exact dates."
+        },
+        {
+            "question": "How can I apply for admission?",
+            "category": "Admission",
+            "answer": "You can apply for admission by visiting our college website and filling out the online application form. After submission, follow the further instructions provided."
+        },
+        {
+            "question": "What documents are required for admission?",
+            "category": "Admission",
+            "answer": "Required documents include your 12th-grade mark sheet, birth certificate, ID proof, passport-sized photographs, and category certificates (if applicable)."
+        },
+        {
+            "question": "Is there any entrance exam for admission?",
+            "category": "Admission",
+            "answer": "Yes, the college may require an entrance exam for specific courses. Please refer to the course details for information regarding entrance exams."
+        },
+        {
+            "question": "Can I apply if I have a gap year after 12th?",
+            "category": "Admission",
+            "answer": "Yes, you can apply. However, a gap year may need to be justified during the admission process."
+        },
+        {
+            "question": "How can I check the status of my admission application?",
+            "category": "Admission",
+            "answer": "You can check your application status by logging into the admission portal using your application number and date of birth."
+        },
+        {
+            "question": "What is the minimum percentage required for admission?",
+            "category": "Admission",
+            "answer": "The minimum percentage required depends on the course you are applying for. For most courses, a minimum of 50% in your 12th grade is required."
+        },
+        {
+            "question": "What is the last date to apply for admission?",
+            "category": "Admission",
+            "answer": "The last date to apply for admission varies every year. Please refer to the official website for the latest updates on application deadlines."
+        },
+        {
+            "question": "Can I apply for multiple courses?",
+            "category": "Admission",
+            "answer": "Yes, you can apply for multiple courses, but you will need to submit separate applications for each course."
+        },
+        {
+            "question": "How is the merit list prepared for admission?",
+            "category": "Admission",
+            "answer": "The merit list is prepared based on your 12th-grade marks or entrance exam scores, depending on the course and program you are applying for."
+        },
+        {
+            "question": "What is the admission process for international students?",
+            "category": "Admission",
+            "answer": "International students can apply through the international student portal on the college website. Required documents include your passport, study visa, and previous academic records."
+        },
+        {
+            "question": "What is the cutoff for admission to your college?",
+            "category": "Admission",
+            "answer": "The cutoff varies each year depending on the number of applicants and available seats. Please check the official website for the specific cutoff marks for your desired course."
+        },
+        {
+            "question": "Can I get admission if I belong to a reserved category?",
+            "category": "Admission",
+            "answer": "Yes, reserved category students may have relaxation in the cutoff marks as per government regulations. Ensure to submit the required category certificates."
+        },
+        {
+            "question": "How are the reservations for admission in your college?",
+            "category": "Admission",
+            "answer": "Reservation is provided as per government norms. The categories include SC, ST, OBC, and EWS, and the reservation percentages are based on the guidelines set by the government."
+        },
+        {
+            "question": "Can I get direct admission without an entrance exam?",
+            "category": "Admission",
+            "answer": "Direct admission may be possible for certain courses or in case of vacant seats, but entrance exams are generally required for most courses. Please refer to the course details for more information."
+        },
+        {
+            "question": "What is the admission fee for applying?",
+            "category": "Admission",
+            "answer": "The application fee for admission varies by course. Please check the official admission notification for detailed information on the application fee."
+        },
+        {
+            "question": "Is there any management quota for admission?",
+            "category": "Admission",
+            "answer": "Yes, there is a management quota for certain courses. However, admission through this quota requires meeting certain criteria. Please refer to the admission brochure for more details."
+        },
+        {
+            "question": "How do I apply for hostel accommodation along with admission?",
+            "category": "Admission",
+            "answer": "Hostel accommodation can be applied through the hostel application form, which is available on the college website along with the admission application form."
+        },
+        {
+            "question": "Are there any special scholarships for admission?",
+            "category": "Admission",
+            "answer": "Yes, we offer scholarships based on merit, category, and financial need. Details about scholarships can be found on the college website under the 'Scholarship' section."
+        },
+        {
+            "question": "Can I apply for admission if I have failed in one subject?",
+            "category": "Admission",
+            "answer": "If you have failed in one subject but have cleared the rest, you may be eligible to apply, depending on the specific admission requirements of the course."
+        },
+        {
+            "question": "Can I get admission through sports quota?",
+            "category": "Admission",
+            "answer": "Yes, we offer admission through the sports quota for students who have excelled in specific sports. You will need to provide relevant certificates and proof of your achievements."
+        },
+        {
+            "question": "What is the procedure for admission after qualifying the entrance exam?",
+            "category": "Admission",
+            "answer": "After qualifying the entrance exam, you will need to participate in counseling, where seat allocation, document verification, and fee payment will be done."
+        },
+        {
+            "question": "What are the available branches in engineering at your college?",
+            "category": "Branches and Fields",
+            "answer": "The college offers a variety of engineering branches, including Computer Engineering, Mechanical Engineering, Telecommunication Engineering, Artificial Intelligence/Data Science (AI/DS), Artificial Intelligence/Machine Learning (AI/ML), and Internet of Things (IoT)."
+        },
+        {
+            "question": "What is the Computer Engineering branch about?",
+            "category": "Branches and Fields",
+            "answer": "Computer Engineering combines elements of computer science and electrical engineering to focus on the development of software and hardware systems. Topics include programming, algorithms, hardware design, and networking."
+        },
+        {
+            "question": "What programming languages are taught in the Computer Engineering branch?",
+            "category": "Branches and Fields",
+            "answer": "In Computer Engineering, students learn various programming languages, including C, C++, Java, Python, and sometimes specialized languages for embedded systems like Assembly and Verilog."
+        },
+        {
+            "question": "What are the job opportunities after completing a degree in Computer Engineering?",
+            "category": "Branches and Fields",
+            "answer": "Graduates of Computer Engineering can work in software development, system architecture, cybersecurity, cloud computing, and IT consulting. They can also work in industries like telecommunications, finance, and education."
+        },
+        {
+            "question": "What is Mechanical Engineering?",
+            "category": "Branches and Fields",
+            "answer": "Mechanical Engineering involves the design, analysis, and manufacturing of mechanical systems. It covers topics such as thermodynamics, fluid mechanics, material science, and mechanical design."
+        },
+        {
+            "question": "What career opportunities are available for Mechanical Engineering graduates?",
+            "category": "Branches and Fields",
+            "answer": "Mechanical Engineering graduates can work in industries like automotive, aerospace, robotics, manufacturing, energy, and HVAC systems. Roles include mechanical design engineer, automotive engineer, and production engineer."
+        },
+        {
+            "question": "What is the Telecommunication Engineering branch about?",
+            "category": "Branches and Fields",
+            "answer": "Telecommunication Engineering focuses on communication technologies, including signal processing, networking, wireless communication, and the design of communication systems like mobile networks and satellite communications."
+        },
+        {
+            "question": "What job opportunities are there for Telecommunication Engineering graduates?",
+            "category": "Branches and Fields",
+            "answer": "Graduates can work in telecom companies, networking companies, satellite communications, and organizations specializing in signal processing, mobile technology, and broadband services."
+        },
+        {
+            "question": "What is Artificial Intelligence/Data Science (AI/DS)?",
+            "category": "Branches and Fields",
+            "answer": "AI/DS focuses on using algorithms and data analysis techniques to solve complex problems. Topics include machine learning, deep learning, data visualization, and big data analytics."
+        },
+        {
+            "question": "Can I specialize in Machine Learning within AI/DS?",
+            "category": "Branches and Fields",
+            "answer": "Yes, the AI/DS branch offers specializations in Machine Learning, Natural Language Processing, Computer Vision, and data analytics, preparing students for careers in AI and data-driven roles."
+        },
+        {
+            "question": "What job opportunities are available after studying Artificial Intelligence/Data Science?",
+            "category": "Branches and Fields",
+            "answer": "Graduates of AI/DS can work as Data Scientists, Machine Learning Engineers, AI Specialists, Business Intelligence Analysts, or Data Analysts in tech, finance, healthcare, and consulting industries."
+        },
+        {
+            "question": "What is the AI/ML branch about?",
+            "category": "Branches and Fields",
+            "answer": "The AI/ML branch focuses on developing algorithms that allow computers to learn and make decisions from data. This includes deep learning, reinforcement learning, neural networks, and natural language processing."
+        },
+        {
+            "question": "What are the main subjects in Artificial Intelligence/Machine Learning?",
+            "category": "Branches and Fields",
+            "answer": "Key subjects in AI/ML include machine learning algorithms, neural networks, computer vision, natural language processing, data mining, and statistical methods in AI."
+        },
+        {
+            "question": "What career opportunities are available after completing an AI/ML degree?",
+            "category": "Branches and Fields",
+            "answer": "Graduates can work as AI Engineers, Data Scientists, Machine Learning Engineers, NLP Engineers, Research Scientists, and AI Consultants in industries such as tech, finance, healthcare, and autonomous systems."
+        },
+        {
+            "question": "What is the Internet of Things (IoT) branch about?",
+            "category": "Branches and Fields",
+            "answer": "The IoT branch focuses on connecting everyday devices to the internet to exchange data. It involves hardware design, embedded systems, data analysis, and the development of smart devices and sensors."
+        },
+        {
+            "question": "What is the job scope after studying Internet of Things (IoT)?",
+            "category": "Branches and Fields",
+            "answer": "IoT graduates can work in industries like smart home automation, healthcare technology, automotive, and industrial automation. Roles include IoT Developer, Embedded Systems Engineer, IoT Solutions Architect, and Firmware Engineer."
+        },
+        {
+            "question": "Are there any specializations available within the IoT branch?",
+            "category": "Branches and Fields",
+            "answer": "Yes, within the IoT branch, students can specialize in areas like smart cities, industrial IoT, sensor networks, data analytics, and security for IoT systems."
+        },
+        {
+            "question": "What are the skills learned in the IoT engineering course?",
+            "category": "Branches and Fields",
+            "answer": "IoT engineering students learn skills related to embedded systems, sensor design, wireless communication, cloud computing, and data analytics. They also learn programming in languages such as C, C++, and Python."
+        },
+        {
+            "question": "What software tools are used in the IoT field?",
+            "category": "Branches and Fields",
+            "answer": "In IoT, students use tools such as Arduino, Raspberry Pi, MATLAB, IoT cloud platforms (like AWS IoT), and simulation software like NS3 for network simulation."
+        },
+        {
+            "question": "What subjects are covered in IoT engineering?",
+            "category": "Branches and Fields",
+            "answer": "Subjects in IoT engineering include embedded systems, sensor networks, wireless communication, cloud computing, and IoT security."
+        },
+        {
+            "question": "What is the difference between AI/ML and AI/DS?",
+            "category": "Branches and Fields",
+            "answer": "AI/ML focuses on developing algorithms and models that enable machines to learn from data, while AI/DS combines AI with data science techniques like data mining, big data analytics, and data visualization."
+        },
+        {
+            "question": "Are there internships available for students in AI/ML, AI/DS, and IoT?",
+            "category": "Branches and Fields",
+            "answer": "Yes, the college has industry tie-ups and offers internship opportunities in AI/ML, AI/DS, and IoT. Students can gain hands-on experience with leading companies in the tech industry."
+        },
+        {
+            "question": "What is the total tuition fee for the B.E./B.Tech program at SIGCE?",
+            "category": "Fees",
+            "answer": "The total tuition fee for the B.E./B.Tech program at SIGCE is approximately ₹2.88 lakhs for the entire 4-year course."
+        },
+        {
+            "question": "What is the annual fee for open category students at SIGCE?",
+            "category": "Fees",
+            "answer": "Open category students are required to pay approximately ₹87,160 per year."
+        },
+        {
+            "question": "What is the annual fee for OBC category students at SIGCE?",
+            "category": "Fees",
+            "answer": "OBC category students typically pay around ₹51,000 per year, subject to applicable scholarships."
+        },
+        {
+            "question": "What is the annual fee for SC/ST category students at SIGCE?",
+            "category": "Fees",
+            "answer": "SC/ST category students pay approximately ₹7,000 per year, depending on the specific scholarship schemes they are eligible for."
+        },
+        {
+            "question": "Are there any fee concessions for female students at SIGCE?",
+            "category": "Fees",
+            "answer": "Yes, female students from reserved categories such as VJ, NT, SBC, and TFWS are required to pay ₹15,723 annually."
+        },
+        {
+            "question": "What is the fee structure for direct second-year (lateral entry) students at SIGCE?",
+            "category": "Fees",
+            "answer": "Direct second-year students pay approximately ₹87,960 per year, totaling around ₹2.64 lakhs for the 3-year duration."
+        },
+        {
+            "question": "Does SIGCE offer any scholarships to students?",
+            "category": "Fees",
+            "answer": "Yes, SIGCE offers various scholarships including those from the Maharashtra government's MahaDBT portal, covering categories like SC, ST, OBC, VJNT, SBC, and EBC."
+        },
+        {
+            "question": "What is the fee for Computer Engineering at SIGCE?",
+            "category": "Fees",
+            "answer": "The annual fee for Computer Engineering is approximately ₹87,160, totaling around ₹3.49 lakhs for the 4-year program."
+        },
+        {
+            "question": "What is the fee for Mechanical Engineering at SIGCE?",
+            "category": "Fees",
+            "answer": "Mechanical Engineering students pay approximately ₹87,160 per year, totaling around ₹3.49 lakhs for the 4-year program."
+        },
+        {
+            "question": "What is the fee for Artificial Intelligence and Data Science at SIGCE?",
+            "category": "Fees",
+            "answer": "The annual fee for Artificial Intelligence and Data Science is approximately ₹87,160, totaling around ₹3.49 lakhs for the 4-year program."
+        },
+        {
+            "question": "What is the fee for Artificial Intelligence and Machine Learning at SIGCE?",
+            "category": "Fees",
+            "answer": "The annual fee for Artificial Intelligence and Machine Learning is approximately ₹87,160, totaling around ₹3.49 lakhs for the 4-year program."
+        },
+        {
+            "question": "What is the fee for IoT and Cyber Security including Blockchain Technology at SIGCE?",
+            "category": "Fees",
+            "answer": "The annual fee for IoT and Cyber Security including Blockchain Technology is approximately ₹87,160, totaling around ₹3.49 lakhs for the 4-year program."
+        },
+        {
+            "question": "What is the fee for Electrical Engineering at SIGCE?",
+            "category": "Fees",
+            "answer": "Electrical Engineering students pay approximately ₹87,160 per year, totaling around ₹3.49 lakhs for the 4-year program."
+        },
+        {
+            "question": "What is the fee for Electronics and Telecommunication Engineering at SIGCE?",
+            "category": "Fees",
+            "answer": "The annual fee for Electronics and Telecommunication Engineering is approximately ₹87,160, totaling around ₹3.49 lakhs for the 4-year program."
+        },
+        {
+            "question": "Are there any additional fees apart from tuition at SIGCE?",
+            "category": "Fees",
+            "answer": "Yes, students may be required to pay additional fees such as examination fees, development fees, and other miscellaneous charges as per the college's fee structure."
+        },
+        {
+            "question": "Does SIGCE provide hostel facilities?",
+            "category": "Fees",
+            "answer": "As per available information, SIGCE does not offer hostel facilities. Students may need to arrange accommodation independently."
+        },
+        {
+            "question": "What are the accepted modes of fee payment at SIGCE?",
+            "category": "Fees",
+            "answer": "Fees can be paid via Demand Draft, Pay Order, NEFT, RTGS, IMPS, or UPI. Cash payments are not accepted."
+        },
+        {
+            "question": "Are there installment options available for fee payment at SIGCE?",
+            "category": "Fees",
+            "answer": "Yes, the college allows fee payments in installments. Students should contact the Accounts Department for detailed information."
+        },
+        {
+            "question": "What is the fee for students under the TFWS scheme at SIGCE?",
+            "category": "Fees",
+            "answer": "Students admitted under the TFWS scheme are required to pay ₹15,723 annually."
+        },
+        {
+            "question": "Are there any penalties for late fee payment at SIGCE?",
+            "category": "Fees",
+            "answer": "Yes, late fee payments may attract penalties. Students are advised to pay fees within the stipulated deadlines to avoid additional charges."
+        },
+        {
+            "question": "What undergraduate engineering courses are offered at SIGCE?",
+            "category": "Courses",
+            "answer": "SIGCE offers the following B.E. programs: Computer Engineering, Computer Science and Engineering (Artificial Intelligence and Machine Learning), Computer Science and Engineering (IoT and Cyber Security including Blockchain Technology), Artificial Intelligence and Data Science, Electrical Engineering, and Mechanical Engineering."
+        },
+        {
+            "question": "What is the duration of the B.E. programs at SIGCE?",
+            "category": "Courses",
+            "answer": "All B.E. programs at SIGCE have a duration of 4 years, divided into 8 semesters."
+        },
+        {
+            "question": "What is the intake capacity for each B.E. course at SIGCE?",
+            "category": "Courses",
+            "answer": "Each B.E. course at SIGCE has an intake capacity of 60 students per academic year."
+        },
+        {
+            "question": "Is SIGCE affiliated with any university?",
+            "category": "Courses",
+            "answer": "Yes, SIGCE is affiliated with the University of Mumbai and is approved by AICTE."
+        },
+        {
+            "question": "Does SIGCE offer lateral entry for diploma holders?",
+            "category": "Courses",
+            "answer": "Yes, SIGCE offers lateral entry admissions into the second year of B.E. programs for diploma holders in relevant engineering disciplines."
+        },
+        {
+            "question": "What are the eligibility criteria for B.E. admissions at SIGCE?",
+            "category": "Courses",
+            "answer": "Candidates must have completed 10+2 with Physics, Chemistry, and Mathematics, and have a valid score in MHT-CET or JEE Main."
+        },
+        {
+            "question": "Are there any specialized labs at SIGCE for practical learning?",
+            "category": "Courses",
+            "answer": "Yes, SIGCE has advanced labs in Robotics, Mechatronics, 3D Printing, and industry-sponsored labs for hands-on training in emerging technologies."
+        },
+        {
+            "question": "Does SIGCE offer any certification courses in emerging technologies?",
+            "category": "Courses",
+            "answer": "Yes, SIGCE offers certified courses in collaboration with industry experts in areas like Artificial Intelligence, Blockchain, Big Data, and Analytics."
+        },
+        {
+            "question": "Are there any industry-academia collaborations at SIGCE?",
+            "category": "Courses",
+            "answer": "Yes, SIGCE has dedicated floors for industry-sponsored labs and courses, promoting industry-academia collaboration."
+        },
+        {
+            "question": "What is the focus of the Artificial Intelligence and Data Science program at SIGCE?",
+            "category": "Courses",
+            "answer": "The AI and Data Science program focuses on machine learning, data analytics, and AI technologies to prepare students for data-driven roles."
+        },
+        {
+            "question": "What subjects are covered in the IoT and Cyber Security program at SIGCE?",
+            "category": "Courses",
+            "answer": "The program covers Internet of Things, Cyber Security, Blockchain Technology, and related emerging technologies."
+        },
+        {
+            "question": "Does SIGCE provide any support for student startups?",
+            "category": "Courses",
+            "answer": "Yes, SIGCE has a fully functional Start-up Incubation Center to support student entrepreneurship and innovation."
+        },
+        {
+            "question": "Are there any additional skill development programs at SIGCE?",
+            "category": "Courses",
+            "answer": "Yes, SIGCE offers soft skill and technical skill development programs, including training for competitive exams like GATE and GRE."
+        },
+        {
+            "question": "What is the 'Technocrat 3.0' initiative at SIGCE?",
+            "category": "Courses",
+            "answer": "'Technocrat 3.0' is a dynamic, interactive, hands-on digital learning environment aimed at training future technocrats with a global perspective."
+        },
+        {
+            "question": "Does SIGCE offer any programs in collaboration with Reliance Jio?",
+            "category": "Courses",
+            "answer": "Yes, SIGCE has industry participation and collaborations, including partnerships with Reliance Jio for industry-sponsored labs and courses."
+        },
+        {
+            "question": "What is the focus of the Mechanical Engineering program at SIGCE?",
+            "category": "Courses",
+            "answer": "The Mechanical Engineering program focuses on the design, analysis, and manufacturing of mechanical systems, covering topics like thermodynamics and fluid mechanics."
+        },
+        {
+            "question": "What is the focus of the Electrical Engineering program at SIGCE?",
+            "category": "Courses",
+            "answer": "The Electrical Engineering program covers electrical systems, circuits, and power systems, preparing students for roles in the electrical industry."
+        },
+        {
+            "question": "Are there any extracurricular activities related to courses at SIGCE?",
+            "category": "Courses",
+            "answer": "Yes, SIGCE organizes workshops, guest lectures, and events like 'IGNITE' to enhance learning beyond the classroom."
+        },
+        {
+            "question": "Does SIGCE offer any online courses or learning platforms?",
+            "category": "Courses",
+            "answer": "SIGCE provides a digital learning environment through 'Technocrat 3.0', offering interactive and hands-on digital learning experiences."
+        },
+        {
+            "question": "How does SIGCE ensure industry readiness among its students?",
+            "category": "Courses",
+            "answer": "Through industry collaborations, certified courses, advanced labs, and skill development programs, SIGCE ensures students are industry-ready upon graduation."
+        },
+        {
+            "question": "What is the highest placement package offered at SIGCE?",
+            "category": "Placements",
+            "answer": "The highest placement package offered at SIGCE is ₹13 LPA."
+        },
+        {
+            "question": "What is the average placement package at SIGCE?",
+            "category": "Placements",
+            "answer": "The average placement package at SIGCE is approximately ₹5.5 LPA."
+        },
+        {
+            "question": "Which companies have recruited students from SIGCE?",
+            "category": "Placements",
+            "answer": "Companies like Capgemini, Paytm, Jio, LTI, TCS, Infosys, Wipro, Tech Mahindra, Accenture, Amazon, and Reliance have recruited students from SIGCE."
+        },
+        {
+            "question": "What is the placement percentage at SIGCE?",
+            "category": "Placements",
+            "answer": "Approximately 60% of students get placed through campus placements at SIGCE."
+        },
+        {
+            "question": "Does SIGCE provide placement assistance to students?",
+            "category": "Placements",
+            "answer": "Yes, SIGCE offers 100% placement assistance for qualified students."
+        },
+        {
+            "question": "Are there any notable alumni from SIGCE?",
+            "category": "Placements",
+            "answer": "Yes, some distinguished alumni are working in large MNCs such as Citibank, Microsoft, PayTM, Reliance, and TCS at senior levels."
+        },
+        {
+            "question": "What is the eligibility criteria for campus placements at SIGCE?",
+            "category": "Placements",
+            "answer": "Students must clear all semesters without any backlogs to be eligible for campus placements at SIGCE."
+        },
+        {
+            "question": "Does SIGCE have a dedicated placement cell?",
+            "category": "Placements",
+            "answer": "Yes, SIGCE has a dedicated placement cell that organizes campus interviews by inviting various companies for student placements."
+        },
+        {
+            "question": "What kind of training does SIGCE provide for placements?",
+            "category": "Placements",
+            "answer": "SIGCE provides training in aptitude tests, personality development, communication skills, resume preparation, group discussions, and interview skills."
+        },
+        {
+            "question": "Are internships offered to students at SIGCE?",
+            "category": "Placements",
+            "answer": "Yes, several companies offer internships to students at SIGCE, providing practical experience in their respective fields."
+        },
+        {
+            "question": "What is the median placement package at SIGCE?",
+            "category": "Placements",
+            "answer": "The median placement package at SIGCE is approximately ₹5.8 LPA."
+        },
+        {
+            "question": "How many companies visited SIGCE for placements in 2025?",
+            "category": "Placements",
+            "answer": "Around 40 companies visited SIGCE for placements in the year 2025."
+        },
+        {
+            "question": "How many students were placed in 2025 at SIGCE?",
+            "category": "Placements",
+            "answer": "In 2025, 115 students were placed through campus placements at SIGCE."
+        },
+        {
+            "question": "What is the lowest placement package offered at SIGCE?",
+            "category": "Placements",
+            "answer": "The lowest placement package offered at SIGCE is ₹4.5 LPA."
+        },
+        {
+            "question": "Does SIGCE collaborate with industries for placements?",
+            "category": "Placements",
+            "answer": "Yes, SIGCE collaborates with industries and has industry-sponsored labs and courses to enhance student employability."
+        },
+        {
+            "question": "Are there any startup incubation centers at SIGCE?",
+            "category": "Placements",
+            "answer": "Yes, SIGCE has a fully functional Startup Incubation Center to support student entrepreneurship and innovation."
+        },
+        {
+            "question": "What is the placement scenario for Computer Engineering students at SIGCE?",
+            "category": "Placements",
+            "answer": "Computer Engineering students at SIGCE have a placement percentage of around 60%-65%, with companies like TCS, Infosys, and Cognizant recruiting them."
+        },
+        {
+            "question": "Do companies like Amazon and Microsoft recruit from SIGCE?",
+            "category": "Placements",
+            "answer": "Yes, companies like Amazon and Microsoft have recruited students from SIGCE in the past."
+        },
+        {
+            "question": "What is the role of the placement cell at SIGCE?",
+            "category": "Placements",
+            "answer": "The placement cell at SIGCE organizes campus interviews, provides training, and assists students in securing job opportunities."
+        },
+        {
+            "question": "Are there any placement preparation programs at SIGCE?",
+            "category": "Placements",
+            "answer": "Yes, SIGCE conducts various placement preparation programs, including mock interviews, aptitude tests, and soft skill development sessions."
+        },
+        {
+            "question": "What is IGNITE at SIGCE?",
+            "category": "Campus Life",
+            "answer": "IGNITE is the annual cultural festival of SIGCE, featuring a variety of events such as music, dance, drama, and other cultural activities. It is a platform for students to showcase their talents and is one of the most anticipated events of the year."
+        },
+        {
+            "question": "When is IGNITE usually held at SIGCE?",
+            "category": "Campus Life",
+            "answer": "IGNITE is typically held in the month of March each year, bringing together students from various departments to participate in cultural festivities."
+        },
+        {
+            "question": "What is SANGRAM at SIGCE?",
+            "category": "Campus Life",
+            "answer": "SANGRAM is the annual sports festival of SIGCE, encompassing various sports competitions and activities, promoting physical fitness and teamwork among students."
+        },
+        {
+            "question": "What types of sports are included in SANGRAM?",
+            "category": "Campus Life",
+            "answer": "SANGRAM includes a range of sports such as cricket, football, badminton, table tennis, and athletics, encouraging widespread student participation."
+        },
+        {
+            "question": "Does SIGCE have a technical fest?",
+            "category": "Campus Life",
+            "answer": "Yes, SIGCE organizes technical festivals like 'Enlightenment' and 'Techfiesta', which include workshops, seminars, and competitions in various engineering domains."
+        },
+        {
+            "question": "What is 'Enlightenment' at SIGCE?",
+            "category": "Campus Life",
+            "answer": "'Enlightenment' is a premier technical festival hosted by SIGCE, featuring events such as coding competitions, technical paper presentations, and expert talks, aimed at enhancing technical knowledge and skills."
+        },
+        {
+            "question": "Are there any student clubs at SIGCE?",
+            "category": "Campus Life",
+            "answer": "Yes, SIGCE has various student-run clubs including the Robotics Club, Coding Club, Cultural Club, and Sports Club, providing platforms for students to pursue their interests and develop new skills."
+        },
+        {
+            "question": "What is the role of the Cultural Club at SIGCE?",
+            "category": "Campus Life",
+            "answer": "The Cultural Club at SIGCE organizes events and activities related to music, dance, drama, and other cultural expressions, fostering creativity and cultural awareness among students."
+        },
+        {
+            "question": "Does SIGCE participate in NSS activities?",
+            "category": "Campus Life",
+            "answer": "Yes, SIGCE actively participates in National Service Scheme (NSS) activities, involving students in community service, social awareness campaigns, and rural development programs."
+        },
+        {
+            "question": "What facilities are available in the SIGCE library?",
+            "category": "Campus Life",
+            "answer": "The SIGCE library is well-stocked with a wide range of academic and reference books, journals, and digital resources, supporting the educational and research needs of students and faculty."
+        },
+        {
+            "question": "Are there any annual alumni events at SIGCE?",
+            "category": "Campus Life",
+            "answer": "Yes, SIGCE organizes annual alumni events, providing a platform for former students to reconnect, share experiences, and contribute to the college community."
+        },
+        {
+            "question": "What is the 'Techfiesta' event at SIGCE?",
+            "category": "Campus Life",
+            "answer": "'Techfiesta' is a departmental event organized by the Computer Engineering department at SIGCE, featuring technical quizzes, coding competitions, and cultural activities."
+        },
+        {
+            "question": "Does SIGCE have facilities for indoor games?",
+            "category": "Campus Life",
+            "answer": "Yes, SIGCE provides facilities for indoor games such as table tennis, chess, and carrom, promoting recreational activities among students."
+        },
+        {
+            "question": "Are there any entrepreneurship initiatives at SIGCE?",
+            "category": "Campus Life",
+            "answer": "Yes, SIGCE has a Start-up Incubation Center that supports student entrepreneurship by providing resources, mentorship, and networking opportunities."
+        },
+        {
+            "question": "What is the 'Ignition Incubation Center' at SIGCE?",
+            "category": "Campus Life",
+            "answer": "The 'Ignition Incubation Center' at SIGCE is an initiative to foster innovation and entrepreneurship among students, offering support for start-up ideas and projects."
+        },
+        {
+            "question": "Does SIGCE celebrate traditional festivals?",
+            "category": "Campus Life",
+            "answer": "Yes, SIGCE celebrates various traditional festivals such as Ganesh Utsav and Navratri, promoting cultural diversity and unity among students."
+        },
+        {
+            "question": "Are there any workshops conducted at SIGCE?",
+            "category": "Campus Life",
+            "answer": "Yes, SIGCE regularly conducts workshops on emerging technologies, soft skills, and industry trends, enhancing the practical knowledge of students."
+        },
+        {
+            "question": "What is the 'Technocrat 3.0' initiative at SIGCE?",
+            "category": "Campus Life",
+            "answer": "'Technocrat 3.0' is a dynamic, interactive, hands-on digital learning environment at SIGCE, aimed at training future technocrats with a global perspective."
+        },
+        {
+            "question": "Does SIGCE have a canteen facility?",
+            "category": "Campus Life",
+            "answer": "Yes, SIGCE has a canteen that provides a variety of food options for students and staff, ensuring convenient on-campus dining."
+        },
+        {
+            "question": "Are there any student exchange programs at SIGCE?",
+            "category": "Campus Life",
+            "answer": "While specific student exchange programs are not detailed, SIGCE's collaborations with industry and academic institutions provide students with exposure to diverse learning environments."
+        },
+        {
+            "question": "Does SIGCE provide hostel facilities for students?",
+            "category": "Facilities",
+            "answer": "No, SIGCE does not offer on-campus hostel facilities. Students typically arrange accommodation in nearby areas, with options ranging from ₹2,000 to ₹4,000 per month on a sharing basis."
+        },
+        {
+            "question": "What are the library timings at SIGCE?",
+            "category": "Facilities",
+            "answer": "The SIGCE library operates from Monday to Friday, 9:30 AM to 6:00 PM. It remains closed on Saturdays, Sundays, and public holidays."
+        },
+        {
+            "question": "How many books can a student borrow from the SIGCE library?",
+            "category": "Facilities",
+            "answer": "Students can borrow up to 3 books at a time for a loan period of 15 days."
+        },
+        {
+            "question": "What is the seating capacity of the SIGCE library?",
+            "category": "Facilities",
+            "answer": "The SIGCE library has a carpet area of over 4,000 sq. ft. and can accommodate 150 students in its reading hall."
+        },
+        {
+            "question": "Does SIGCE have a canteen facility?",
+            "category": "Facilities",
+            "answer": "Yes, SIGCE has a canteen that offers a variety of food options for students and staff."
+        },
+        {
+            "question": "Are there sports facilities available at SIGCE?",
+            "category": "Facilities",
+            "answer": "Yes, SIGCE provides sports facilities for various games, including cricket, football, badminton, table tennis, and athletics."
+        },
+        {
+            "question": "Does SIGCE have a medical facility on campus?",
+            "category": "Facilities",
+            "answer": "Yes, SIGCE has a health center equipped with first-aid facilities to cater to the medical needs of students and staff."
+        },
+        {
+            "question": "Are there computer labs available for students at SIGCE?",
+            "category": "Facilities",
+            "answer": "Yes, SIGCE has well-equipped computer labs for Advanced Computing, Multimedia, Graphics, Database, Software Engineering, and Network Engineering."
+        },
+        {
+            "question": "Does SIGCE have an auditorium for events and seminars?",
+            "category": "Facilities",
+            "answer": "Yes, SIGCE has an auditorium facility used for various events, seminars, and workshops."
+        },
+        {
+            "question": "Is there Wi-Fi available on the SIGCE campus?",
+            "category": "Facilities",
+            "answer": "Yes, Wi-Fi is available in the SIGCE library for students and staff."
+        },
+        {
+            "question": "Are there separate reading rooms for students and staff in the SIGCE library?",
+            "category": "Facilities",
+            "answer": "Yes, the SIGCE library has two reading rooms for students and one for staff members."
+        },
+        {
+            "question": "Does SIGCE have a reprographic center?",
+            "category": "Facilities",
+            "answer": "Yes, the SIGCE library includes a reprographic center that provides photocopying and printing services."
+        },
+        {
+            "question": "Are there any industry-sponsored labs at SIGCE?",
+            "category": "Facilities",
+            "answer": "Yes, SIGCE has dedicated floors for industry-sponsored labs and courses, promoting industry-academia collaboration."
+        },
+        {
+            "question": "Does SIGCE have a startup incubation center?",
+            "category": "Facilities",
+            "answer": "Yes, SIGCE has a fully functional Start-up Incubation Center to support student entrepreneurship and innovation."
+        },
+        {
+            "question": "Are there any clubs or societies at SIGCE?",
+            "category": "Facilities",
+            "answer": "Yes, SIGCE has various student-run clubs, including the Robotics Club, Coding Club, Cultural Club, and Sports Club."
+        },
+        {
+            "question": "Does SIGCE have facilities for indoor games?",
+            "category": "Facilities",
+            "answer": "Yes, SIGCE provides facilities for indoor games such as table tennis, chess, and carrom."
+        },
+        {
+            "question": "Are there any workshops conducted at SIGCE?",
+            "category": "Facilities",
+            "answer": "Yes, SIGCE regularly conducts workshops on emerging technologies, soft skills, and industry trends."
+        },
+        {
+            "question": "Does SIGCE have a dedicated placement cell?",
+            "category": "Facilities",
+            "answer": "Yes, SIGCE has a dedicated placement cell that organizes campus interviews and provides training for students."
+        },
+        {
+            "question": "Are there any alumni events organized at SIGCE?",
+            "category": "Facilities",
+            "answer": "Yes, SIGCE organizes annual alumni events, providing a platform for former students to reconnect and share experiences."
+        },
+        {
+            "question": "Does SIGCE have facilities for cultural events?",
+            "category": "Facilities",
+            "answer": "Yes, SIGCE has facilities to host cultural events, including festivals like IGNITE and various departmental fests."
+        },
+        {
+            "question": "Does SIGCE have CCTV surveillance on campus?",
+            "category": "Safety and Security",
+            "answer": "Yes, SIGCE is equipped with CCTV cameras installed at strategic locations across the campus to ensure the safety of students and staff."
+        },
+        {
+            "question": "Are security guards present on the SIGCE campus?",
+            "category": "Safety and Security",
+            "answer": "Yes, SIGCE employs trained security personnel who are stationed at various entry and exit points to monitor and manage campus security."
+        },
+        {
+            "question": "Is there an emergency contact number available at SIGCE?",
+            "category": "Safety and Security",
+            "answer": "Yes, SIGCE provides emergency contact numbers to students and staff for immediate assistance during emergencies."
+        },
+        {
+            "question": "Are fire extinguishers available in all buildings at SIGCE?",
+            "category": "Safety and Security",
+            "answer": "Yes, fire extinguishers are installed in all buildings at SIGCE as part of the college's fire safety measures."
+        },
+        {
+            "question": "Is there a first aid kit available on the SIGCE campus?",
+            "category": "Safety and Security",
+            "answer": "Yes, first aid kits are available at designated locations on campus to provide immediate medical assistance when needed."
+        },
+        {
+            "question": "Does SIGCE have a fire evacuation plan?",
+            "category": "Safety and Security",
+            "answer": "Yes, SIGCE has a fire evacuation plan in place, and regular drills are conducted to ensure preparedness during emergencies."
+        },
+        {
+            "question": "Are lifts equipped with emergency alarms at SIGCE?",
+            "category": "Safety and Security",
+            "answer": "Yes, all lifts at SIGCE are equipped with emergency alarms and communication systems to ensure safety during power failures or other emergencies."
+        },
+        {
+            "question": "Is there a campus-wide public address system at SIGCE?",
+            "category": "Safety and Security",
+            "answer": "Yes, SIGCE has a public address system installed across the campus to make announcements during emergencies or important events."
+        },
+        {
+            "question": "Are there designated safe zones on the SIGCE campus?",
+            "category": "Safety and Security",
+            "answer": "Yes, SIGCE has designated safe zones where students can seek shelter during emergencies or adverse situations."
+        },
+        {
+            "question": "Is there a campus clinic or medical facility at SIGCE?",
+            "category": "Safety and Security",
+            "answer": "Yes, SIGCE has a health center equipped to handle minor medical emergencies and provide basic healthcare services."
+        },
+        {
+            "question": "Are there provisions for differently-abled students at SIGCE?",
+            "category": "Safety and Security",
+            "answer": "Yes, SIGCE has provisions such as ramps and accessible restrooms to accommodate differently-abled students."
+        },
+        {
+            "question": "Is there a women's safety cell at SIGCE?",
+            "category": "Safety and Security",
+            "answer": "Yes, SIGCE has a women's safety cell that addresses grievances and ensures the safety and well-being of female students and staff."
+        },
+        {
+            "question": "Are there emergency exits in all buildings at SIGCE?",
+            "category": "Safety and Security",
+            "answer": "Yes, all buildings at SIGCE are equipped with clearly marked emergency exits to facilitate safe evacuation during emergencies."
+        },
+        {
+            "question": "Is there a disaster management committee at SIGCE?",
+            "category": "Safety and Security",
+            "answer": "Yes, SIGCE has a disaster management committee that formulates and implements strategies to handle natural or man-made disasters."
+        },
+        {
+            "question": "Are there regular safety audits conducted at SIGCE?",
+            "category": "Safety and Security",
+            "answer": "Yes, SIGCE conducts regular safety audits to identify potential hazards and implement corrective measures."
+        },
+        {
+            "question": "Is there a grievance redressal mechanism for safety-related issues at SIGCE?",
+            "category": "Safety and Security",
+            "answer": "Yes, SIGCE has a grievance redressal mechanism where students and staff can report safety-related concerns for prompt action."
+        },
+        {
+            "question": "Are there awareness programs on safety conducted at SIGCE?",
+            "category": "Safety and Security",
+            "answer": "Yes, SIGCE organizes workshops and seminars to raise awareness about safety protocols and personal security."
+        },
+        {
+            "question": "Is there a tie-up with local police for campus security at SIGCE?",
+            "category": "Safety and Security",
+            "answer": "Yes, SIGCE maintains a liaison with local police authorities to ensure enhanced security and quick response during emergencies."
+        },
+        {
+            "question": "Are there provisions for night-time security at SIGCE?",
+            "category": "Safety and Security",
+            "answer": "Yes, SIGCE ensures round-the-clock security with personnel stationed during night hours to safeguard the campus."
+        },
+        {
+            "question": "What is the nearest railway station to SIGCE?",
+            "category": "Transport",
+            "answer": "The nearest railway station to SIGCE is Ghansoli Railway Station, which is approximately 800 meters away, about a 10-minute walk."
+        },
+        {
+            "question": "What is the distance between SIGCE and Ghansoli Railway Station?",
+            "category": "Transport",
+            "answer": "The distance between SIGCE and Ghansoli Railway Station is approximately 800 meters, which is about a 10-minute walk."
+        },
+        {
+            "question": "Which bus stops are near SIGCE?",
+            "category": "Transport",
+            "answer": "The nearby bus stops are Rajiv Gandhi College (41 meters away), Megh Malhar Society (473 meters away), and Ghansoli Bus Depot (1.5 kilometers away)."
+        },
+        {
+            "question": "What are the bus routes serving SIGCE?",
+            "category": "Transport",
+            "answer": "The bus routes serving SIGCE are C-521, 20AC, 50, 9AC, 3, 10, 31, 40, and 18AC."
+        },
+        {
+            "question": "Is there a college bus service provided by SIGCE?",
+            "category": "Transport",
+            "answer": "As of the latest available information, SIGCE does not operate its own dedicated college buses. Students typically rely on the public transport network provided by NMMT and local train services."
+        },
+        {
+            "question": "Are there parking facilities at SIGCE?",
+            "category": "Transport",
+            "answer": "Yes, SIGCE provides parking facilities for both two-wheelers and four-wheelers, ensuring proper management and security."
+        },
+        {
+            "question": "Does SIGCE provide parking for two-wheelers?",
+            "category": "Transport",
+            "answer": "Yes, SIGCE provides parking facilities for two-wheelers."
+        },
+        {
+            "question": "Does SIGCE provide parking for four-wheelers?",
+            "category": "Transport",
+            "answer": "Yes, SIGCE provides parking facilities for four-wheelers."
+        },
+        {
+            "question": "What is the nearest bus stop to SIGCE?",
+            "category": "Transport",
+            "answer": "The nearest bus stop to SIGCE is Rajiv Gandhi College, which is 41 meters away, about a 1-minute walk."
+        },
+        {
+            "question": "What is the distance from SIGCE to Megh Malhar Society bus stop?",
+            "category": "Transport",
+            "answer": "Megh Malhar Society bus stop is approximately 473 meters away from SIGCE, about a 7-minute walk."
+        },
+        {
+            "question": "Is there a direct train connection to SIGCE?",
+            "category": "Transport",
+            "answer": "Yes, there is a direct train connection to SIGCE via Ghansoli Railway Station, which is located about 800 meters from the college."
+        },
+        {
+            "question": "What is the approximate walking distance from SIGCE to Ghansoli Bus Depot?",
+            "category": "Transport",
+            "answer": "The Ghansoli Bus Depot is approximately 1.5 kilometers away from SIGCE."
+        },
+        {
+            "question": "Which bus routes connect to Ghansoli Railway Station?",
+            "category": "Transport",
+            "answer": "The following bus routes connect to Ghansoli Railway Station: C-521, 20AC, 50, 9AC, 3, 10, 31, 40, 18AC."
+        },
+        {
+            "question": "How far is the Ghansoli Bus Depot from SIGCE?",
+            "category": "Transport",
+            "answer": "The Ghansoli Bus Depot is approximately 1.5 kilometers away from SIGCE."
+        },
+        {
+            "question": "What is the dress code at SIGCE?",
+            "category": "College Policies and Rules",
+            "answer": "SIGCE expects students to maintain a professional and respectful appearance. Casual or inappropriate attire is discouraged. The dress code may vary for certain events, but students are expected to adhere to the general guidelines."
+        },
+        {
+            "question": "What are the behavioral guidelines for students at SIGCE?",
+            "category": "College Policies and Rules",
+            "answer": "Students are expected to maintain decorum in all academic and non-academic settings. They should respect faculty members, peers, and staff, and contribute to a positive and collaborative environment."
+        },
+        {
+            "question": "Are there any specific guidelines on student behavior at SIGCE?",
+            "category": "College Policies and Rules",
+            "answer": "Yes, SIGCE has specific guidelines for student behavior, which include punctuality, respect towards faculty, maintenance of discipline, and adherence to college policies. Any violation may lead to disciplinary action."
+        },
+        {
+            "question": "What is the policy on ragging at SIGCE?",
+            "category": "College Policies and Rules",
+            "answer": "Ragging is strictly prohibited at SIGCE. The college has a zero-tolerance policy towards ragging, and any student found involved in ragging will face strict disciplinary action, including possible expulsion."
+        },
+        {
+            "question": "What is SIGCE's stance on discrimination?",
+            "category": "College Policies and Rules",
+            "answer": "SIGCE maintains a strict anti-discrimination policy. Discrimination based on caste, gender, religion, or any other factor is not tolerated, and appropriate action will be taken against anyone found guilty of such behavior."
+        },
+        {
+            "question": "Are students allowed to participate in extra-curricular activities at SIGCE?",
+            "category": "College Policies and Rules",
+            "answer": "Yes, SIGCE encourages students to participate in various extra-curricular activities, such as sports, cultural events, and clubs. These activities help in the overall development of students."
+        },
+        {
+            "question": "What is the policy on attendance at SIGCE?",
+            "category": "College Policies and Rules",
+            "answer": "SIGCE has a strict attendance policy. Students must maintain a minimum attendance of 75% in each subject to be eligible for appearing in the exams. Frequent absenteeism may lead to disciplinary action."
+        },
+        {
+            "question": "Are there any codes of conduct for faculty members at SIGCE?",
+            "category": "College Policies and Rules",
+            "answer": "Yes, faculty members are expected to adhere to a professional code of conduct, which includes maintaining punctuality, treating students with respect, and following the academic and ethical guidelines set by the institution."
+        },
+        {
+            "question": "What actions are taken if a student violates the college's code of conduct?",
+            "category": "College Policies and Rules",
+            "answer": "If a student violates the code of conduct, they may face disciplinary actions, including warnings, fines, suspension, or even expulsion, depending on the severity of the violation."
+        },
+        {
+            "question": "Is there a formal grievance redressal mechanism at SIGCE?",
+            "category": "College Policies and Rules",
+            "answer": "Yes, SIGCE has a formal grievance redressal mechanism where students can report issues related to faculty, infrastructure, or any other concerns. The college ensures a transparent and fair process for resolving grievances."
+        },
+        {
+            "question": "What is SIGCE's policy on the use of mobile phones on campus?",
+            "category": "College Policies and Rules",
+            "answer": "The use of mobile phones is discouraged in classrooms and examination halls to prevent distractions. However, students can use mobile phones during breaks or in common areas as long as it does not disrupt academic activities."
+        },
+        {
+            "question": "Are there any guidelines for maintaining discipline during events and fests at SIGCE?",
+            "category": "College Policies and Rules",
+            "answer": "Yes, SIGCE expects students to maintain discipline during events and fests. Students must follow the event guidelines, respect others, and avoid disruptive behavior to ensure the smooth functioning of the events."
+        },
+        {
+            "question": "Does SIGCE have any policy regarding student-teacher interactions?",
+            "category": "College Policies and Rules",
+            "answer": "SIGCE encourages healthy and respectful student-teacher interactions. Students should approach faculty members with respect and maintain professional conduct during academic discussions."
+        },
+        {
+            "question": "What is the policy on student attendance for co-curricular activities at SIGCE?",
+            "category": "College Policies and Rules",
+            "answer": "Students are encouraged to participate in co-curricular activities, but they must ensure their academic attendance is not compromised. Participation in these activities should be planned so as not to interfere with classes."
+        },
+        {
+            "question": "What actions are taken for students who engage in inappropriate behavior at SIGCE?",
+            "category": "College Policies and Rules",
+            "answer": "Inappropriate behavior, including bullying, harassment, or violent conduct, is strictly prohibited. Students engaging in such behavior will face disciplinary action, which could include suspension or expulsion."
+        },
+        {
+            "question": "Is there any policy related to academic dishonesty at SIGCE?",
+            "category": "College Policies and Rules",
+            "answer": "SIGCE has a strict anti-plagiarism and anti-cheating policy. Any student found guilty of academic dishonesty, including cheating during exams or plagiarizing assignments, will face severe consequences."
+        },
+        {
+            "question": "Are students allowed to use social media during college hours?",
+            "category": "College Policies and Rules",
+            "answer": "Students are allowed to use social media, but it should not interfere with their academic responsibilities. The college expects students to be mindful of their online conduct and avoid inappropriate content."
+        },
+        {
+            "question": "What is SIGCE's policy on the consumption of alcohol and drugs?",
+            "category": "College Policies and Rules",
+            "answer": "SIGCE has a strict no-alcohol and no-drug policy. Consumption or possession of alcohol, drugs, or any illegal substances on campus is prohibited, and violators will face strict disciplinary actions."
+        },
+        {
+            "question": "What is the dress code during formal college events or fests?",
+            "category": "College Policies and Rules",
+            "answer": "During formal college events and fests, students are expected to wear smart and professional attire, which reflects the prestige of the college. Casual wear or inappropriate clothing is not allowed during such events."
+        },
+        {
+            "question": "What was the MHT CET cutoff for B.Tech in Computer Engineering at SIGCE in 2024?",
+            "category": "Cut-off Information",
+            "answer": "The MHT CET 2024 cutoff percentile for B.Tech in Computer Engineering at SIGCE was 88.63% for General category (Home State)."
+        },
+        {
+            "question": "What was the MHT CET cutoff for B.Tech in Computer Engineering at SIGCE in 2023?",
+            "category": "Cut-off Information",
+            "answer": "The MHT CET 2023 cutoff percentile for B.Tech in Computer Engineering at SIGCE was 87.63% for General category (Home State)."
+        },
+        {
+            "question": "What was the MHT CET cutoff for B.Tech in Computer Engineering at SIGCE in 2022?",
+            "category": "Cut-off Information",
+            "answer": "The MHT CET 2022 cutoff percentile for B.Tech in Computer Engineering at SIGCE was 80.37% for General category (Home State)."
+        },
+        {
+            "question": "What was the MHT CET cutoff for B.Tech in Electrical Engineering at SIGCE in 2024?",
+            "category": "Cut-off Information",
+            "answer": "The MHT CET 2024 cutoff percentile for B.Tech in Electrical Engineering at SIGCE was 82.48% for General category (Home State)."
+        },
+        {
+            "question": "What was the MHT CET cutoff for B.Tech in Electrical Engineering at SIGCE in 2023?",
+            "category": "Cut-off Information",
+            "answer": "The MHT CET 2023 cutoff percentile for B.Tech in Electrical Engineering at SIGCE was 18.82% for General category (Home State)."
+        },
+        {
+            "question": "What was the MHT CET cutoff for B.Tech in Electrical Engineering at SIGCE in 2022?",
+            "category": "Cut-off Information",
+            "answer": "The MHT CET 2022 cutoff percentile for B.Tech in Electrical Engineering at SIGCE was 21.23% for General category (Home State)."
+        },
+        {
+            "question": "What was the MHT CET cutoff for B.Tech in Computer Science and Engineering (IoT and Cyber Security Including Blockchain Technology) at SIGCE in 2024?",
+            "category": "Cut-off Information",
+            "answer": "The MHT CET 2024 cutoff percentile for B.Tech in Computer Science and Engineering (IoT and Cyber Security Including Blockchain Technology) at SIGCE was 90.3% for General category (Home State)."
+        },
+        {
+            "question": "What was the MHT CET cutoff for B.Tech in Computer Science and Engineering (IoT and Cyber Security Including Blockchain Technology) at SIGCE in 2023?",
+            "category": "Cut-off Information",
+            "answer": "The MHT CET 2023 cutoff percentile for B.Tech in Computer Science and Engineering (IoT and Cyber Security Including Blockchain Technology) at SIGCE was 80.05% for General category (Home State)."
+        },
+        {
+            "question": "What was the MHT CET cutoff for B.Tech in Computer Science and Engineering (IoT and Cyber Security Including Blockchain Technology) at SIGCE in 2022?",
+            "category": "Cut-off Information",
+            "answer": "The MHT CET 2022 cutoff percentile for B.Tech in Computer Science and Engineering (IoT and Cyber Security Including Blockchain Technology) at SIGCE was 72.9% for General category (Home State)."
+        },
+        {
+            "question": "What was the MHT CET cutoff for B.Tech in Computer Science and Engineering (Artificial Intelligence and Machine Learning) at SIGCE in 2024?",
+            "category": "Cut-off Information",
+            "answer": "The MHT CET 2024 cutoff percentile for B.Tech in Computer Science and Engineering (Artificial Intelligence and Machine Learning) at SIGCE was 86.78% for General category (Home State)."
+        },
+        {
+            "question": "What was the MHT CET cutoff for B.Tech in Computer Science and Engineering (Artificial Intelligence and Machine Learning) at SIGCE in 2023?",
+            "category": "Cut-off Information",
+            "answer": "The MHT CET 2023 cutoff percentile for B.Tech in Computer Science and Engineering (Artificial Intelligence and Machine Learning) at SIGCE was 86.98% for General category (Home State)."
+        },
+        {
+            "question": "What was the MHT CET cutoff for B.Tech in Computer Science and Engineering (Artificial Intelligence and Machine Learning) at SIGCE in 2022?",
+            "category": "Cut-off Information",
+            "answer": "The MHT CET 2022 cutoff percentile for B.Tech in Computer Science and Engineering (Artificial Intelligence and Machine Learning) at SIGCE was 76.7% for General category (Home State)."
+        },
+        {
+            "question": "What was the MHT CET cutoff for B.Tech in Artificial Intelligence and Data Science at SIGCE in 2024?",
+            "category": "Cut-off Information",
+            "answer": "The MHT CET 2024 cutoff percentile for B.Tech in Artificial Intelligence and Data Science at SIGCE was 86.23% for General category (Home State)."
+        },
+        {
+            "question": "What was the MHT CET cutoff for B.Tech in Artificial Intelligence and Data Science at SIGCE in 2023?",
+            "category": "Cut-off Information",
+            "answer": "The MHT CET 2023 cutoff percentile for B.Tech in Artificial Intelligence and Data Science at SIGCE was 75.35% for General category (Home State)."
+        },
+        {
+            "question": "Where can I find the official MHT CET cutoff lists for SIGCE?",
+            "category": "Cut-off Information",
+            "answer": "The official MHT CET cutoff lists for SIGCE can be accessed through the State Common Entrance Test Cell, Maharashtra's website at <a href='https://fe2024.mahacet.org/' target='_blank'>https://fe2024.mahacet.org/</a>.<br><br>Here are the MHT CET 2024 cutoff percentiles for SIGCE (General Open Category - GOPENH):<br><br><b>Computer Engineering:</b> Round 1 - 90.35 | Round 2 - 88.78 | Round 3 - 88.63<br><b>Artificial Intelligence and Data Science:</b> Round 1 - 88.36 | Round 2 - 87.13 | Round 3 - 86.23<br><b>Artificial Intelligence & Machine Learning:</b> Round 1 - 87.28 | Round 2 - 86.08 | Round 3 - 86.08<br><b>IoT & Cyber Security Including Blockchain:</b> Round 1 - 86.08 | Round 2 - 82.71 | Round 3 - 90.30<br><b>Electrical Engineering:</b> Round 1 - 67.69 | Round 2 - 63.07<br><b>Mechanical Engineering:</b> Round 1 - 66.48 | Round 2 - 47.91"
+        },
+        {
+            "question": "Can you show me the canteen, food court, or mess area images of SIGCE?",
+            "category": "Images",
+            "answer": "<img src='/static/img/47.jpg' class='chat-image'/>"
+        },
+        {
+            "question": "Can you show me the ground, playground, or open space images?",
+            "category": "Images",
+            "answer": "<img src='/static/img/48.jpg' class='chat-image'/>"
+        },
+        {
+            "question": "Can you show me the parking lot or vehicle parking images?",
+            "category": "Images",
+            "answer": "<img src='/static/img/49.jpg' class='chat-image'/>"
+        },
+        {
+            "question": "Can you show me the lift, elevator, or lift lobby images in SIGCE?",
+            "category": "Images",
+            "answer": "<img src='/static/img/50.jpg' class='chat-image'/>"
+        },
+        {
+            "question": "Can you show me the main gate, college entrance, or entry gate images of SIGCE?",
+            "category": "Images",
+            "answer": "<img src='/static/img/52.jpg' class='chat-image'/>"
+        },
+        {
+            "question": "Can you show me the computer lab, programming lab, or IT lab images?",
+            "category": "Images",
+            "answer": "<img src='/static/img/101.jpg' class='chat-image'/><img src='/static/img/102.jpg' class='chat-image'/>"
+        },
+        {
+            "question": "Can you show me the triangle corridor, triangular sitting space, or triangle path images?",
+            "category": "Images",
+            "answer": "<img src='/static/img/58.jpg' class='chat-image'/>"
+        },
+        {
+            "question": "Can you show me the hallway, passage, or corridor near classrooms images?",
+            "category": "Images",
+            "answer": "<img src='/static/img/71.jpg' class='chat-image'/><img src='/static/img/54.jpg' class='chat-image'/>"
+        },
+        {
+            "question": "Can you show me the chemistry lab images of SIGCE?",
+            "category": "Images",
+            "answer": "<img src='/static/img/60.jpg' class='chat-image'/>"
+        },
+        {
+            "question": "Can you show me the Smt. Indira Gandhi College of Engineering images?",
+            "category": "Images",
+            "answer": "<img src='/static/img/BuildingIndex.jpeg' class='chat-image'/>"
+        },
+        {
+            "question": "Can you show me the Mechanics lab images?",
+            "category": "Images",
+            "answer": "<img src='/static/img/72.jpg' class='chat-image'/>"
+        },
+        {
+            "question": "Can you show me the BEE or ELectrical engineering lab images?",
+            "category": "Images",
+            "answer": "<img src='/static/img/74.jpg' class='chat-image'/>"
+        },
+        {
+            "question": "Can you show me the library and reading area images?",
+            "category": "Images",
+            "answer": "<img src='/static/img/77.jpg' class='chat-image'/><img src='/static/img/73.jpg' class='chat-image'/>"
+        },
+        {
+            "question": "Can you show me the classroom images?",
+            "category": "Images",
+            "answer": "<img src='/static/img/75.jpg' class='chat-image'/><img src='/static/img/71.jpg' class='chat-image'/>"
+        },
+        {
+            "question": "Can you show me the technical study room in library images?",
+            "category": "Images",
+            "answer": "<img src='/static/img/76.jpg' class='chat-image'/>"
+        },
+        {
+            "question": "I want to talk to someone from the college",
+            "answer": "We're sorry the chatbot couldn't help you completely. You can reach out to SMT. Indira Gandhi College of Engineering directly:\n\nPhone: +91-22-27572140 / +91-9136000221\nEmail: info@sigce.edu.in\nWebsite: www.sigce.edu.in\nAddress: Plot No. 1, Sector 8, Ghansoli, Navi Mumbai, Maharashtra 400701"
+        },
+        {
+            "question": "I need human help",
+            "answer": "We're sorry the chatbot couldn't help you completely. You can reach out to SMT. Indira Gandhi College of Engineering directly:\n\nPhone: +91-22-27572140 / +91-9136000221\nEmail: info@sigce.edu.in\nWebsite: www.sigce.edu.in\nAddress: Plot No. 1, Sector 8, Ghansoli, Navi Mumbai, Maharashtra 400701"
+        },
+        {
+            "question": "I am not satisfied with the response",
+            "answer": "We're sorry the chatbot couldn't help you completely. You can reach out to SMT. Indira Gandhi College of Engineering directly:\n\nPhone: +91-22-27572140 / +91-9136000221\nEmail: info@sigce.edu.in\nWebsite: www.sigce.edu.in\nAddress: Plot No. 1, Sector 8, Ghansoli, Navi Mumbai, Maharashtra 400701"
+        },
+        {
+            "question": "Can I speak to someone from the staff?",
+            "answer": "We're sorry the chatbot couldn't help you completely. You can reach out to SMT. Indira Gandhi College of Engineering directly:\n\nPhone: +91-22-27572140 / +91-9136000221\nEmail: info@sigce.edu.in\nWebsite: www.sigce.edu.in\nAddress: Plot No. 1, Sector 8, Ghansoli, Navi Mumbai, Maharashtra 400701"
+        },
+        {
+            "question": "I want to contact the college",
+            "answer": "We're sorry the chatbot couldn't help you completely. You can reach out to SMT. Indira Gandhi College of Engineering directly:\n\nPhone: +91-22-27572140 / +91-9136000221\nEmail: info@sigce.edu.in\nWebsite: www.sigce.edu.in\nAddress: Plot No. 1, Sector 8, Ghansoli, Navi Mumbai, Maharashtra 400701"
+        },
+        {
+            "question": "This answer didn't help me",
+            "answer": "We're sorry the chatbot couldn't help you completely. You can reach out to SMT. Indira Gandhi College of Engineering directly:\n\nPhone: +91-22-27572140 / +91-9136000221\nEmail: info@sigce.edu.in\nWebsite: www.sigce.edu.in\nAddress: Plot No. 1, Sector 8, Ghansoli, Navi Mumbai, Maharashtra 400701"
+        },
+        {
+            "question": "Can you give me the location of Smt. Indira Gandhi College of Engineering?",
+            "category": "Location",
+            "answer": "Smt Indira Gandhi College of Engineering is located at Plot No.1, Sector 8, Ghansoli, Navi Mumbai, Maharashtra 400701, India. <br><a href='https://www.google.com/maps/place/Smt.+Indira+Gandhi+College+Of+Engineering/@19.1193619,72.9997977,17z' target='_blank'>View on Google Maps</a>"
+        },
+        {
+            "question": "Who is the principal of Smt. Indira Gandhi College of Engineering?",
+            "category": "Staff",
+            "answer": "The Principal of Smt. Indira Gandhi College of Engineering is Dr. Sunil S. Chavan."
+        },
+        {
+            "question": "Who are the trustees of Smt. Indira Gandhi College of Engineering?",
+            "category": "Staff",
+            "answer": "The trustees of Smt. Indira Gandhi College of Engineering are:<br>• Mr. Sunil R. Jadhav – Managing Director<br>• Mrs. Sharmishtha S. Jadhav – Managing Trustee<br>• Mrs. Ashvini Jadhav – Managing Trustee"
+        },
+        {
+            "question": "Who is the Managing Director of Smt. Indira Gandhi College of Engineering?",
+            "category": "Staff",
+            "answer": "Mr. Sunil R. Jadhav is the Managing Director of Smt. Indira Gandhi College of Engineering."
+        },
+        {
+            "question": "What is the official website of Smt. Indira Gandhi College of Engineering?",
+            "category": "Website",
+            "answer": "The official website of Smt. Indira Gandhi College of Engineering is <a href='https://sigce.edu.in/' target='_blank'>https://sigce.edu.in/</a>."
+        },
+        {
+            "question": "What are the latest updates from SIGCE?",
+            "category": "Latest Updates",
+            "answer": "For the latest updates regarding admissions, events, and academic news, please visit the official website at <a href='https://sigce.edu.in/' target='_blank'>https://sigce.edu.in/</a>."
+        },
+        {
+            "question": "What is the address of SIGCE?",
+            "category": "Address",
+            "answer": "The address of SIGCE is <b>Plot No. 1, Sector 8, Ghansoli, Navi Mumbai - 400701, Maharashtra, India</b>.<br><a href='https://www.google.com/maps/place/Smt.+Indira+Gandhi+College+Of+Engineering/@19.1193619,72.9997977,17z' target='_blank'>View on Google Maps</a>"
+        },
+        {
+            "question": "What B.E. courses are offered at SIGCE?",
+            "category": "Courses Offered",
+            "answer": "SIGCE offers the following B.E. courses: <b>Computer Engineering, Artificial Intelligence and Machine Learning (AI-ML), Internet of Things (IoT), Aids (AI & Data Science), Mechanical Engineering, and Electrical Engineering</b>."
+        },
+        {
+            "question": "What is the contact information for SIGCE?",
+            "category": "Contact Info",
+            "answer": "You can contact SIGCE at <b>+91-8080949300</b> or <b>contactus@sigce.edu.in</b>. The official address is <b>Plot No. 1, Sector 8, Ghansoli, Navi Mumbai - 400701</b>."
+        },
+        {
+            "question": "What is the fee structure for SIGCE based on marks and categories?",
+            "category": "Fees",
+            "answer": "The annual fee structure at SIGCE varies based on the category and scholarship eligibility. For the 2024–25 academic year, approximate fees are as follows: Open Category: ₹87,000; OBC: ₹51,000; SC/ST: ₹6,000–₹7,000. Additional scholarships like EBC and government schemes may further reduce fees. For precise details, please refer to the official website or contact the admission office at <b>+91-8080949300</b> or <b>contactus@sigce.edu.in</b>."
+        },
+        {
+            "question": "What facilities are available at SIGCE for differently-abled (handicapped) students?",
+            "category": "Facilities",
+            "answer": "SIGCE provides inclusive infrastructure for differently-abled students. The campus is equipped with <b>elevators (lifts)</b> for easy movement across floors and <b>special washrooms</b> designed specifically for handicapped students to ensure accessibility and convenience."
+        },
+        {
+            "question": "Is SIGCE wheelchair accessible?",
+            "category": "Facilities",
+            "answer": "Yes, SIGCE is wheelchair accessible. The campus has <b>ramps</b> at entrances and wide pathways to ensure smooth movement for students using wheelchairs."
+        },
+        {
+            "question": "Are there lifts available at SIGCE for easy access to upper floors?",
+            "category": "Facilities",
+            "answer": "Yes, SIGCE provides <b>elevator (lift) facilities</b> in all major academic and administrative buildings to assist differently-abled students and staff in moving easily across different floors."
+        },
+        {
+            "question": "Does SIGCE offer additional support for differently-abled students?",
+            "category": "Student Support",
+            "answer": "Yes, SIGCE is committed to supporting differently-abled students by offering <b>inclusive facilities</b> like lifts, accessible washrooms, ramps, and providing academic and non-academic assistance whenever required."
+        },
+        {
+            "question": "jee exam cutoff list for mumbai university colleges",
+            "answer": "The cutoff list for Mumbai University colleges can vary from year to year, and it's also dependent on the specific college and course.\nHowever, I can provide you with some general information about the JEE exam cutoff list for Mumbai University colleges.\n\nMumbai University does not directly use JEE Main scores for admission to its colleges.\nInstead, it uses the Maharashtra Common Entrance Test (MHT-CET) scores for admission to engineering colleges.\nHowever, some colleges in Mumbai may consider JEE Main scores for admission to certain courses.\n\nThat being said, here are some of the top Mumbai University colleges and their JEE Main cutoff scores for the year 2022:\n\n1. **Veermata Jijabai Technological Institute (VJTI)**:\n\t* Computer Engineering: 140-160\n\t* Electronics and Telecommunication Engineering: 130-150\n\t* Mechanical Engineering: 120-140\n2. **Institute of Chemical Technology (ICT)**:\n\t* Chemical Engineering: 150-170\n\t* Dyestuff Technology: 140-160\n\t* Pharmaceutical Chemistry: 130-150\n3. **K.J.\nSomaiya College of Engineering**:\n\t* Computer Engineering: 120-140\n\t* Electronics and Telecommunication Engineering: 110-130\n\t* Mechanical Engineering: 100-120\n4. **Thadomal Shahani Engineering College (TSEC)**:\n\t* Computer Engineering: 100-120\n\t* Electronics and Telecommunication Engineering: 90-110\n\t* Mechanical Engineering: 80-100\n5. **Sardar Patel Institute of Technology (SPIT)**:\n\t* Computer Engineering: 110-130\n\t* Electronics and Telecommunication Engineering: 100-120\n\t* Mechanical Engineering: 90-110\n\nPlease note that these cutoff scores are subject to change and may vary from year to year.\nIt's also important to note that these scores are based on the JEE Main paper-1 scores, which are used for admission to B.Tech/B.E. courses.\n\nFor the latest and most accurate information, I would recommend checking the official website of the college or the Maharashtra State Common Entrance Test Cell (MHT-CET) website."
+        },
+        {
+            "question": "jee",
+            "answer": "It seems like you're trying to find the address of SIGCE, but I need a bit more context.\nCould you please provide more information about SIGCE, such as what it stands for or what type of organization it is? That way, I can try to help you find the correct address."
+        },
+        {
+            "question": "tree lab images of S I G C E",
+            "answer": "I'm not aware of the current address of SIGCE (Somaiya Institute of Gilbert Chesterton) or the specific details about the JEE exam cutoff list for Mumbai University colleges.\nHowever, I can provide some general information.\n\nThe Somaiya Institute of Gilbert Chesterton (SIGCE) is not a well-known institution, and I couldn't find any information about it.\nIt's possible that it's a fictional or non-existent institution.\n\nRegarding the JEE exam cutoff list for Mumbai University colleges, the cutoff list is typically released by the Joint Admission Committee (JAC) or the Mumbai University after the JEE exams.\nThe cutoff list varies from year to year and depends on various factors such as the number of applicants, the difficulty level of the exam, and the availability of seats in the colleges.\n\nIf you're looking for information about the JEE exam cutoff list for Mumbai University colleges, I suggest checking the official website of the Mumbai University or the JAC website for the latest information.\n\nAs for the tree lab images of SIGCE, I couldn't find any information or images related to it.\nIf you have any more context or details about the SIGCE tree lab, I may be able to help you better."
+        },
+        {
+            "question": "mystery lab images of S I G C E",
+            "answer": "I'm not aware of any information about \"SIGCE\" or \"Mystery Lab Images\" related to it.\nCould you provide more context or clarify what SIGCE refers to? Is it a specific institution, organization, or event? Additionally, what do you mean by \"Mystery Lab Images\"? Are you looking for images related to a specific lab or project? I'll do my best to help if you provide more details."
+        },
+        {
+            "question": "mern stack course",
+            "answer": "A MERN stack course is a comprehensive program that teaches students how to build web applications using the MERN stack, which consists of:\n\n1. **M**ongoDB: A NoSQL database that stores data in a JSON-like format.\n2. **E**xpress.js: A popular Node.js framework for building web applications.\n3. **R**eact.js: A JavaScript library for building user interfaces and single-page applications.\n4. **N**ode.js: A JavaScript runtime environment that allows developers to run JavaScript on the server-side.\n\nHere's an outline of what a typical MERN stack course might cover:\n\n**Course Overview**\n\n* Introduction to the MERN stack and its components\n* Setting up the development environment\n* Understanding the basics of each technology\n\n**Module 1: MongoDB**\n\n* Introduction to NoSQL databases and MongoDB\n* Data modeling and schema design\n* CRUD (Create, Read, Update, Delete) operations\n* MongoDB queries and indexing\n* MongoDB data types and validation\n\n**Module 2: Express.js**\n\n* Introduction to Express.js and Node.js\n* Setting up an Express.js project\n* Routing and middleware\n* Request and response objects\n* Error handling and debugging\n* Using templates and static files\n\n**Module 3: React.js**\n\n* Introduction to React.js and its ecosystem\n* Components and JSX\n* State and props\n* Event handling and callbacks\n* React Hooks and Context API\n* React Router and client-side routing\n\n**Module 4: Node.js and Backend Development**\n\n* Introduction to Node.js and its ecosystem\n* Building a RESTful API with Express.js\n* API design and endpoint creation\n* Authentication and authorization\n* Error handling and debugging\n* Using Node.js modules and packages\n\n**Module 5: Full-Stack Development**\n\n* Integrating React.js with Express.js and MongoDB\n* Building a full-stack application\n* Using React.js for frontend development\n* Using Express.js for backend development\n* Using MongoDB for data storage\n* Deploying the application to a cloud platform\n\n**Module 6: Advanced Topics**\n\n* Using GraphQL with React.js and Express.js\n* Implementing authentication and authorization\n* Using WebSockets and Socket.IO\n* Deploying to a cloud platform (e.g.\nAWS, Google Cloud, Microsoft Azure)\n* Best practices for testing and debugging\n\n**Course Projects**\n\n* Building a simple blog application\n* Building a todo list application\n* Building a social media application\n* Building a e-commerce application\n\n**Course Prerequisites**\n\n* Basic knowledge of JavaScript and HTML/CSS\n* Familiarity with command-line interfaces and version control systems (e.g.\nGit)\n\n**Course Format**\n\n* Online video lessons\n* Interactive coding exercises\n* Live instructor support\n* Community forum and discussion board\n* Project-based learning and feedback\n\n**Course Duration**\n\n* Self-paced: 2-3 months\n* Instructor-led: 1-2 months\n\n**Course Cost**\n\n* Self-paced: $200-$500\n* Instructor-led: $500-$1,500\n\nNote that the course outline, duration, and cost may vary depending on the provider and the specific course."
+        }
+    ]
+}
