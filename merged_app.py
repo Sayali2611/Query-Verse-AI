@@ -19,6 +19,10 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 import speech_recognition as sr
 from io import BytesIO
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__, static_folder='static')
@@ -36,9 +40,9 @@ cred = credentials.Certificate("firebase-credentials.json")
 firebase_admin.initialize_app(cred)
 firestore_db = firestore.client()
 
-# API Configuration
-TOGETHER_AI_API_KEY = os.getenv("TOGETHER_API_KEY")
-TOGETHER_AI_URL = "https://api.together.xyz/v1/chat/completions"
+# API Configuration - GROQ (FREE & FAST) - SECURE VERSION
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")  # Get from environment variable
+GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 # Load NLP Model
 model = SentenceTransformer('all-mpnet-base-v2')
@@ -315,30 +319,52 @@ def format_response(text):
     return text.strip()
 
 def get_ai_response(user_message, chat_history):
-    """Get AI-generated response from Llama model."""
+    """Get AI-generated response from Groq API (FREE & FAST)."""
+    # Check if API key is set
+    if not GROQ_API_KEY:
+        return "Error: Groq API key not configured. Please set GROQ_API_KEY environment variable."
+    
     headers = {
-        "Authorization": f"Bearer {TOGETHER_AI_API_KEY}",
+        "Authorization": f"Bearer {GROQ_API_KEY}",
         "Content-Type": "application/json"
     }
+    
+    # Prepare messages with chat history
+    messages = []
+    for msg in chat_history:
+        if "user" in msg:
+            messages.append({"role": "user", "content": msg["user"]})
+        if "bot" in msg:
+            messages.append({"role": "assistant", "content": msg["bot"]})
+    
+    # Add current user message
+    messages.append({"role": "user", "content": user_message})
+    
     data = {
-        "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
-        "messages": [{"role": "user", "content": msg["user"]} for msg in chat_history if "user" in msg] + [{"role": "user", "content": user_message}],
-        "max_tokens": 800,
+        "messages": messages,
+        "model": "llama-3.1-8b-instant",  # Free & fast model
         "temperature": 0.7,
-        "top_p": 0.9
+        "max_tokens": 1024,
+        "top_p": 0.9,
+        "stream": False
     }
+    
     try:
-        response = requests.post(TOGETHER_AI_URL, headers=headers, json=data)
+        response = requests.post(GROQ_URL, headers=headers, json=data, timeout=30)
         response.raise_for_status()
         response_data = response.json()
-        choices = response_data.get("choices", [])
-        if choices and "message" in choices[0] and "content" in choices[0]["message"]:
-            return format_response(choices[0]["message"]["content"])
+        
+        if "choices" in response_data and len(response_data["choices"]) > 0:
+            return format_response(response_data["choices"][0]["message"]["content"])
         else:
             return "AI response not available."
-    except requests.RequestException as e:
-        print(f"AI request failed: {e}")
-        return "Sorry, I couldn't generate a response at the moment."
+            
+    except requests.exceptions.RequestException as e:
+        print(f"Groq API request failed: {e}")
+        return "Sorry, I couldn't generate a response at the moment. Please try again."
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+        return "Sorry, I encountered an unexpected error."
 
 def extract_text_from_image(image_path):
     """Extract text from image using OCR."""
