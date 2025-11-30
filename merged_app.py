@@ -545,12 +545,8 @@ def chat():
     # Save to both Firestore and SQL database
     save_chat_history(session['user_id'], user_message, response, session_id)
 
-    # Store new Q&A in knowledge base if needed
-    if not matched_query and response and user_message:
-        if "queries" not in stored_data:
-            stored_data["queries"] = []
-        stored_data["queries"].append({"question": user_message, "answer": response})
-        save_data(stored_data)
+    # REMOVED: Auto-saving user questions to data.json
+    # This ensures user privacy - their questions don't get added to your knowledge base
 
     return jsonify({'response': response})
 
@@ -619,4 +615,4 @@ def voice_to_text():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=False)

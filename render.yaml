@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: query-verse-ai
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python merged_app.py
+    envVars:
+      - key: GROQ_API_KEY
+        value: your_actual_groq_api_key_here
