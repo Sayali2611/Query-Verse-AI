@@ -8,10 +8,6 @@ import json
 import requests
 import uuid
 from werkzeug.utils import secure_filename
-import pytesseract
-from pdf2image import convert_from_path
-import PyPDF2
-from PIL import Image
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
@@ -46,9 +42,6 @@ GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 # Load NLP Model
 model = SentenceTransformer('all-mpnet-base-v2')
-
-# Tesseract OCR Path
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 # Database Models
 class User(db.Model):
@@ -366,50 +359,25 @@ def get_ai_response(user_message, chat_history):
         print(f"Unexpected error: {e}")
         return "Sorry, I encountered an unexpected error."
 
-def extract_text_from_image(image_path):
-    """Extract text from image using OCR."""
-    try:
-        image = Image.open(image_path)
-        return pytesseract.image_to_string(image)
-    except Exception as e:
-        print(f"Image processing error: {e}")
-        return ""
-
-def extract_text_from_pdf(pdf_path):
-    """Extract text from PDF file."""
-    text = ""
-    try:
-        with open(pdf_path, "rb") as f:
-            reader = PyPDF2.PdfReader(f)
-            for page in reader.pages:
-                text += page.extract_text() or ""
-        return text
-    except Exception as e:
-        print(f"PDF processing error: {e}")
-        return ""
-
 def process_uploaded_file(file):
-    """Process uploaded file and return extracted text."""
+    """Process uploaded TEXT files only (OCR removed for deployment)."""
+    if not file.filename.lower().endswith('.txt'):
+        return "Only .txt files are supported for now. Image/PDF processing is temporarily disabled."
+    
     filename = secure_filename(file.filename)
     file_path = os.path.join(app.config["UPLOAD_FOLDER"], filename)
     file.save(file_path)
 
-    extracted_text = ""
     try:
-        if filename.lower().endswith((".png", ".jpg", ".jpeg")):
-            extracted_text = extract_text_from_image(file_path)
-        elif filename.lower().endswith(".pdf"):
-            extracted_text = extract_text_from_pdf(file_path)
-        elif filename.lower().endswith(".txt"):
-            with open(file_path, "r", encoding="utf-8") as f:
-                extracted_text = f.read()
+        with open(file_path, "r", encoding="utf-8") as f:
+            extracted_text = f.read()
     except Exception as e:
-        print(f"File processing error: {e}")
-
-    try:
-        os.remove(file_path)  # Clean up the uploaded file
-    except:
-        pass
+        extracted_text = f"Error reading file: {e}"
+    finally:
+        try:
+            os.remove(file_path)
+        except:
+            pass
 
     return extracted_text.strip()
 
@@ -545,14 +513,11 @@ def chat():
     # Save to both Firestore and SQL database
     save_chat_history(session['user_id'], user_message, response, session_id)
 
-    # REMOVED: Auto-saving user questions to data.json
-    # This ensures user privacy - their questions don't get added to your knowledge base
-
     return jsonify({'response': response})
 
 @app.route('/api/upload', methods=['POST'])
 def upload_file():
-    """Upload & process files with instructions."""
+    """Upload & process TEXT files with instructions."""
     if 'user_id' not in session:
         return jsonify({'error': 'Unauthorized'}), 401
     
@@ -566,8 +531,8 @@ def upload_file():
     instructions = request.form.get("instructions", "Analyze this document and summarize the key points.")
     extracted_text = process_uploaded_file(file)
 
-    if not extracted_text:
-        return jsonify({"error": "No readable text found in file."}), 400
+    if not extracted_text or extracted_text.startswith("Only .txt files") or extracted_text.startswith("Error"):
+        return jsonify({"error": extracted_text}), 400
 
     # Create a prompt combining the instructions and extracted text
     prompt = f"{instructions}\n\nDocument content:\n{extracted_text}"
