@@ -578,6 +578,7 @@ def voice_to_text():
         return jsonify({'error': f'Speech recognition service error: {e}'}), 503
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-
+    
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    port = int(os.environ.get("PORT", 5000))  # Render assigns the PORT, fallback to 5000 locally
+    app.run(host='0.0.0.0', port=port, debug=False)
