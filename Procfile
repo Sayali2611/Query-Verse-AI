@@ -1,1 +1,1 @@
-web: python merged_app.py
+web: gunicorn merged_app:app
