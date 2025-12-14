@@ -382,16 +382,24 @@ def process_uploaded_file(file):
     return extracted_text.strip()
 
 def get_best_match_semantic(user_question, data):
-    """Find the best matching stored answer using NLP."""
+    """Find the best matching stored answer using NLP (no scikit-learn version)."""
     if not data or "queries" not in data or not data["queries"]:
         return None
 
     try:
         user_embedding = model.encode([user_question])
         question_embeddings = model.encode([q["question"] for q in data["queries"]])
-        similarities = cosine_similarity(user_embedding, question_embeddings)[0]
+        
+        # Manual cosine similarity calculation
+        # Normalize embeddings
+        user_norm = user_embedding / np.linalg.norm(user_embedding)
+        questions_norm = question_embeddings / np.linalg.norm(question_embeddings, axis=1, keepdims=True)
+        
+        # Compute cosine similarity
+        similarities = np.dot(questions_norm, user_norm.T).flatten()
         best_match_index = np.argmax(similarities)
         best_match_score = similarities[best_match_index]
+        
         return data["queries"][best_match_index] if best_match_score > 0.7 else None
     except Exception as e:
         print(f"Semantic matching error: {e}")
