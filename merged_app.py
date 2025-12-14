@@ -8,8 +8,8 @@ import json
 import requests
 import uuid
 from werkzeug.utils import secure_filename
-from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
+# from sentence_transformers import SentenceTransformer
+# from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 import firebase_admin
 from firebase_admin import credentials, firestore
