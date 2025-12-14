@@ -382,34 +382,53 @@ def process_uploaded_file(file):
     return extracted_text.strip()
 
 def get_best_match_semantic(user_question, data):
-    """Simple keyword matching - NO sentence-transformers!"""
+    """Smart matching: Only return local answer for VERY GOOD matches."""
     if not data or "queries" not in data:
         return None
     
-    user_q_lower = user_question.lower()
+    user_q_lower = user_question.lower().strip()
     best_match = None
     best_score = 0
     
     for query in data["queries"]:
-        question = query.get("question", "").lower()
+        question = query.get("question", "").lower().strip()
         if not question:
             continue
         
-        # Simple word matching (no AI, no memory issues)
-        user_words = user_q_lower.split()
-        question_words = question.split()
+        # Get ALL words (remove common small words)
+        user_words = set([w for w in user_q_lower.split() if len(w) > 2])
+        question_words = set([w for w in question.split() if len(w) > 2])
         
-        score = 0
-        for word in user_words:
-            if word in question:
-                score += 1
+        if not user_words or not question_words:
+            continue
         
-        if score > best_score:
-            best_score = score
+        # Calculate TWO scores:
+        # 1. Word overlap score
+        common_words = user_words.intersection(question_words)
+        overlap_score = len(common_words) / max(len(user_words), 1)
+        
+        # 2. Exact phrase match bonus
+        exact_match_bonus = 0
+        if user_q_lower in question or question in user_q_lower:
+            exact_match_bonus = 5
+        
+        # 3. Length similarity bonus
+        length_diff = abs(len(user_q_lower) - len(question))
+        length_bonus = 1.0 / (length_diff + 1)
+        
+        # FINAL SCORE (weighted)
+        final_score = (overlap_score * 10) + exact_match_bonus + length_bonus
+        
+        # DEBUG: Uncomment to see matching in logs
+        # print(f"Matching: '{user_q_lower}' vs '{question}' = score {final_score:.2f}")
+        
+        if final_score > best_score:
+            best_score = final_score
             best_match = query
     
-    # Return match only if we found something good
-    return best_match if best_score >= 1 else None
+    # ONLY return if match is REALLY GOOD
+    # Higher threshold = more AI, lower = more local answers
+    return best_match if best_score >= 6.0 else None
 
 @app.route('/api/chat/sessions', methods=['GET'])
 def get_chat_sessions():
@@ -500,33 +519,36 @@ def chat():
     if not user_message:
         return jsonify({'response': 'No message received!'})
 
-    if not session_id:
-        return jsonify({'error': 'No active chat session'}), 400
-
-    # Get current session history from Firestore
-    user_doc_ref = firestore_db.collection('users').document(user_id)
-    user_data = user_doc_ref.get()
-    current_history = []
-    
-    if user_data.exists:
-        data = user_data.to_dict()
-        for s in data.get('chat_sessions', []):
-            if s.get('session_id') == session_id:
-                current_history = s.get('history', [])
-                break
-
-    # First check stored data.json (knowledge base)
+    # 1. FIRST try local knowledge base (only for VERY good matches)
     stored_data = load_data()
     matched_query = get_best_match_semantic(user_message, stored_data)
-
+    
     if matched_query:
+        # Found a GOOD local match - use it
         response = format_response(matched_query["answer"])
+        print(f"✅ Using LOCAL answer for: {user_message}")
     else:
+        # 2. NO good local match - USE GROQ AI
+        print(f"🤖 Using GROQ AI for: {user_message}")
+        
+        # Get chat history for context
+        user_doc_ref = firestore_db.collection('users').document(user_id)
+        user_data = user_doc_ref.get()
+        current_history = []
+        
+        if user_data.exists:
+            data_dict = user_data.to_dict()
+            for s in data_dict.get('chat_sessions', []):
+                if s.get('session_id') == session_id:
+                    current_history = s.get('history', [])
+                    break
+        
+        # Get AI response
         response = get_ai_response(user_message, current_history)
-
-    # Save to both Firestore and SQL database
+    
+    # Save to history
     save_chat_history(session['user_id'], user_message, response, session_id)
-
+    
     return jsonify({'response': response})
 
 @app.route('/api/upload', methods=['POST'])
