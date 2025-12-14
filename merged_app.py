@@ -382,26 +382,34 @@ def process_uploaded_file(file):
     return extracted_text.strip()
 
 def get_best_match_semantic(user_question, data):
-    """Find the best matching stored answer using NLP."""
-    if not data or "queries" not in data or not data["queries"]:
+    """Simple keyword matching - NO sentence-transformers!"""
+    if not data or "queries" not in data:
         return None
-
-    try:
-        # LAZY LOAD: Model loads here, only when needed
-        from sentence_transformers import SentenceTransformer
-        from sklearn.metrics.pairwise import cosine_similarity
-        import numpy as np
+    
+    user_q_lower = user_question.lower()
+    best_match = None
+    best_score = 0
+    
+    for query in data["queries"]:
+        question = query.get("question", "").lower()
+        if not question:
+            continue
         
-        model = SentenceTransformer('all-mpnet-base-v2')
-        user_embedding = model.encode([user_question])
-        question_embeddings = model.encode([q["question"] for q in data["queries"]])
-        similarities = cosine_similarity(user_embedding, question_embeddings)[0]
-        best_match_index = np.argmax(similarities)
-        best_match_score = similarities[best_match_index]
-        return data["queries"][best_match_index] if best_match_score > 0.7 else None
-    except Exception as e:
-        print(f"Semantic matching error: {e}")
-        return None
+        # Simple word matching (no AI, no memory issues)
+        user_words = user_q_lower.split()
+        question_words = question.split()
+        
+        score = 0
+        for word in user_words:
+            if word in question:
+                score += 1
+        
+        if score > best_score:
+            best_score = score
+            best_match = query
+    
+    # Return match only if we found something good
+    return best_match if best_score >= 1 else None
 
 @app.route('/api/chat/sessions', methods=['GET'])
 def get_chat_sessions():
