@@ -40,8 +40,8 @@ firestore_db = firestore.client()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")  # Get from environment variable
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 
-# Load NLP Model
-model = SentenceTransformer('all-mpnet-base-v2')
+# # Load NLP Model
+# model = SentenceTransformer('all-mpnet-base-v2')
 
 # Database Models
 class User(db.Model):
@@ -382,24 +382,22 @@ def process_uploaded_file(file):
     return extracted_text.strip()
 
 def get_best_match_semantic(user_question, data):
-    """Find the best matching stored answer using NLP (no scikit-learn version)."""
+    """Find the best matching stored answer using NLP."""
     if not data or "queries" not in data or not data["queries"]:
         return None
 
     try:
+        # LAZY LOAD: Model loads here, only when needed
+        from sentence_transformers import SentenceTransformer
+        from sklearn.metrics.pairwise import cosine_similarity
+        import numpy as np
+        
+        model = SentenceTransformer('all-mpnet-base-v2')
         user_embedding = model.encode([user_question])
         question_embeddings = model.encode([q["question"] for q in data["queries"]])
-        
-        # Manual cosine similarity calculation
-        # Normalize embeddings
-        user_norm = user_embedding / np.linalg.norm(user_embedding)
-        questions_norm = question_embeddings / np.linalg.norm(question_embeddings, axis=1, keepdims=True)
-        
-        # Compute cosine similarity
-        similarities = np.dot(questions_norm, user_norm.T).flatten()
+        similarities = cosine_similarity(user_embedding, question_embeddings)[0]
         best_match_index = np.argmax(similarities)
         best_match_score = similarities[best_match_index]
-        
         return data["queries"][best_match_index] if best_match_score > 0.7 else None
     except Exception as e:
         print(f"Semantic matching error: {e}")
@@ -587,6 +585,8 @@ def voice_to_text():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
     
+application = app  # Critical for gunicorn on Render
+
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))  # Render assigns the PORT, fallback to 5000 locally
+    port = int(os.environ.get("PORT", 10000))
     app.run(host='0.0.0.0', port=port, debug=False)

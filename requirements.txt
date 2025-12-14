@@ -9,3 +9,4 @@ sentence-transformers==2.7.0  # CHANGED from 2.2.2
 numpy==1.23.5
 speechrecognition==3.10.0
 setuptools==70.0.0
+google-api-core<2.28
